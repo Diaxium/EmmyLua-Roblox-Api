@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6cb9f5a-599e-4ba0-83e1-3ea12797c0b2" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="NewLua" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2E0bgIlXMcpOnk5S9J2FwPUIQ8v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.6.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.6.0&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Advan/Mega/Projects/Roblox/Utilities/Emmy-Roblox Api&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.4\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\Roblox\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.App.js">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="Test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Utilities/Test.js" working-dir="$PROJECT_DIR$/src/Utilities">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.App.js" />
+        <item itemvalue="Node.js.Test.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6cb9f5a-599e-4ba0-83e1-3ea12797c0b2" name="Changes" comment="" />
+      <created>1661735558446</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661735558446</updated>
+      <workItem from="1661735559920" duration="127000" />
+      <workItem from="1661735703070" duration="115000" />
+      <workItem from="1661735835662" duration="30000" />
+      <workItem from="1661736080662" duration="152000" />
+      <workItem from="1661736252299" duration="931000" />
+      <workItem from="1661737206967" duration="375000" />
+      <workItem from="1661737615955" duration="742000" />
+      <workItem from="1661738391712" duration="207000" />
+      <workItem from="1661738612771" duration="6897000" />
+      <workItem from="1661746167127" duration="65000" />
+      <workItem from="1661746242199" duration="7739000" />
+      <workItem from="1661796676414" duration="45127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
