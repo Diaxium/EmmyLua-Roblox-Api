@@ -1,0 +1,69 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: DataModel
+ --->> Type: ServiceProvider
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ DataModel:
+
+--- @class DataModel : ServiceProvider
+--- @field CreatorId number
+--- @field CreatorType Enum.CreatorType
+--- @field GameId number
+--- @field GearGenreSetting Enum.GearGenreSetting
+--- @field Genre Enum.Genre
+--- @field IsSFFlagsLoaded boolean
+--- @field JobId string
+--- @field PlaceId number
+--- @field PlaceVersion number
+--- @field PrivateServerId string
+--- @field PrivateServerOwnerId number
+--- @field VIPServerId string
+--- @field VIPServerOwnerId number
+--- @field Workspace Workspace
+--- @field lighting Instance
+--- @field workspace Workspace
+--- @field BindToClose fun( self : DataModel, function : fun( ) )
+--- @field DefineFastFlag fun( self : DataModel, name : string, defaultValue : boolean ) : boolean
+--- @field DefineFastInt fun( self : DataModel, name : string, defaultValue : number ) : number
+--- @field DefineFastString fun( self : DataModel, name : string, defaultValue : string ) : string
+--- @field GetEngineFeature fun( self : DataModel, name : string ) : boolean
+--- @field GetFastFlag fun( self : DataModel, name : string ) : boolean
+--- @field GetFastInt fun( self : DataModel, name : string ) : number
+--- @field GetFastString fun( self : DataModel, name : string ) : string
+--- @field GetJobsInfo fun( self : DataModel ) : table<number, any>
+--- @field GetMessage fun( self : DataModel ) : string
+--- @field GetObjects fun( self : DataModel, url : string ) : Instance[ ]|any[ ]
+--- @field GetObjectsAllOrNone fun( self : DataModel, url : string ) : Instance[ ]|any[ ]
+--- @field GetObjectsList fun( self : DataModel, urls : table<number, any> ) : table<number, any>
+--- @field GetRemoteBuildMode fun( self : DataModel ) : boolean
+--- @field IsGearTypeAllowed fun( self : DataModel, gearType : Enum.GearType ) : boolean
+--- @field IsLoaded fun( self : DataModel ) : boolean
+--- @field Load fun( self : DataModel, url : string )
+--- @field OpenScreenshotsFolder fun( self : DataModel )
+--- @field OpenVideosFolder fun( self : DataModel )
+--- @field ReportInGoogleAnalytics fun( self : DataModel, category : string, action : string, label : string, value : number )
+--- @field SetFastFlagForTesting fun( self : DataModel, name : string, newValue : boolean ) : boolean
+--- @field SetFastIntForTesting fun( self : DataModel, name : string, newValue : number ) : number
+--- @field SetFastStringForTesting fun( self : DataModel, name : string, newValue : string ) : string
+--- @field SetPlaceId fun( self : DataModel, placeId : number )
+--- @field SetUniverseId fun( self : DataModel, universeId : number )
+--- @field Shutdown fun( self : DataModel )
+--- @field GetObjectsAsync fun( self : DataModel, url : string ) : Instance[ ]|any[ ]
+--- @field HttpGetAsync fun( self : DataModel, url : string, httpRequestType : Enum.HttpRequestType ) : string
+--- @field HttpPostAsync fun( self : DataModel, url : string, data : string, contentType : string, httpRequestType : Enum.HttpRequestType ) : string
+--- @field InsertObjectsAndJoinIfLegacyAsync fun( self : DataModel, url : string ) : Instance[ ]|any[ ]
+--- @field SavePlace fun( self : DataModel, saveFilter : Enum.SaveFilter ) : boolean
+--- @field AllowedGearTypeChanged RBXScriptSignal@fun( )
+--- @field GraphicsQualityChangeRequest RBXScriptSignal@fun( betterQuality : boolean )
+--- @field ItemChanged RBXScriptSignal@fun( object : Instance, descriptor : string )
+--- @field Loaded RBXScriptSignal@fun( )
+--- @field ScreenshotReady RBXScriptSignal@fun( path : string )
+--- @field ScreenshotSavedToAlbum RBXScriptSignal@fun( filename : string, success : boolean, message : string )
+--- @field OnClose fun( self : DataModel ) : table<any, any>
+
+--}}} End of DataModel;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

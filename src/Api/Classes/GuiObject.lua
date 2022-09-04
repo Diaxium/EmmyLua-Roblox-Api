@@ -1,0 +1,63 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: GuiObject
+ --->> Type: GuiBase2d
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ GuiObject:
+
+--- @class GuiObject : GuiBase2d
+--- @field Active boolean
+--- @field AnchorPoint Vector2
+--- @field AutomaticSize Enum.AutomaticSize
+--- @field BackgroundColor BrickColor
+--- @field BackgroundColor3 Color3
+--- @field BackgroundTransparency number
+--- @field BorderColor BrickColor
+--- @field BorderColor3 Color3
+--- @field BorderMode Enum.BorderMode
+--- @field BorderSizePixel number
+--- @field ClipsDescendants boolean
+--- @field Draggable boolean
+--- @field LayoutOrder number
+--- @field NextSelectionDown GuiObject
+--- @field NextSelectionLeft GuiObject
+--- @field NextSelectionRight GuiObject
+--- @field NextSelectionUp GuiObject
+--- @field Position UDim2
+--- @field Rotation number
+--- @field Selectable boolean
+--- @field SelectionImageObject GuiObject
+--- @field SelectionOrder number
+--- @field Size UDim2
+--- @field SizeConstraint Enum.SizeConstraint
+--- @field Transparency number
+--- @field Visible boolean
+--- @field ZIndex number
+--- @field TweenPosition fun( self : GuiObject, endPosition : UDim2, easingDirection : Enum.EasingDirection, easingStyle : Enum.EasingStyle, time : number, override : boolean, callback : fun( ) ) : boolean
+--- @field TweenSize fun( self : GuiObject, endSize : UDim2, easingDirection : Enum.EasingDirection, easingStyle : Enum.EasingStyle, time : number, override : boolean, callback : fun( ) ) : boolean
+--- @field TweenSizeAndPosition fun( self : GuiObject, endSize : UDim2, endPosition : UDim2, easingDirection : Enum.EasingDirection, easingStyle : Enum.EasingStyle, time : number, override : boolean, callback : fun( ) ) : boolean
+--- @field DragBegin RBXScriptSignal@fun( initialPosition : UDim2 )
+--- @field DragStopped RBXScriptSignal@fun( x : number, y : number )
+--- @field InputBegan RBXScriptSignal@fun( input : InputObject )
+--- @field InputChanged RBXScriptSignal@fun( input : InputObject )
+--- @field InputEnded RBXScriptSignal@fun( input : InputObject )
+--- @field MouseEnter RBXScriptSignal@fun( x : number, y : number )
+--- @field MouseLeave RBXScriptSignal@fun( x : number, y : number )
+--- @field MouseMoved RBXScriptSignal@fun( x : number, y : number )
+--- @field MouseWheelBackward RBXScriptSignal@fun( x : number, y : number )
+--- @field MouseWheelForward RBXScriptSignal@fun( x : number, y : number )
+--- @field SelectionGained RBXScriptSignal@fun( )
+--- @field SelectionLost RBXScriptSignal@fun( )
+--- @field TouchLongPress RBXScriptSignal@fun( touchPositions : table<number, any>, state : Enum.UserInputState )
+--- @field TouchPan RBXScriptSignal@fun( touchPositions : table<number, any>, totalTranslation : Vector2, velocity : Vector2, state : Enum.UserInputState )
+--- @field TouchPinch RBXScriptSignal@fun( touchPositions : table<number, any>, scale : number, velocity : number, state : Enum.UserInputState )
+--- @field TouchRotate RBXScriptSignal@fun( touchPositions : table<number, any>, rotation : number, velocity : number, state : Enum.UserInputState )
+--- @field TouchSwipe RBXScriptSignal@fun( swipeDirection : Enum.SwipeDirection, numberOfTouches : number )
+--- @field TouchTap RBXScriptSignal@fun( touchPositions : table<number, any> )
+
+--}}} End of GuiObject;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

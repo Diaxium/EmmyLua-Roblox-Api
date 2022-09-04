@@ -1,0 +1,66 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: Instance
+ --->> Type: <<<ROOT>>>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ Instance:
+
+--- @class Instance : userdata
+--- @field Archivable boolean
+--- @field ClassName string
+--- @field DataCost number
+--- @field Name string
+--- @field Parent Instance
+--- @field RobloxLocked boolean
+--- @field SourceAssetId number
+--- @field archivable boolean
+--- @field className string
+--- @field ClearAllChildren fun( self : Instance )
+--- @field Clone fun( self : Instance ) : Instance
+--- @field Destroy fun( self : Instance )
+--- @field FindFirstAncestor fun( self : Instance, name : string ) : Instance
+--- @field FindFirstAncestorOfClass fun( self : Instance, className : string ) : Instance
+--- @field FindFirstAncestorWhichIsA fun( self : Instance, className : string ) : Instance
+--- @field FindFirstChild fun( self : Instance, name : string, recursive : boolean ) : Instance
+--- @field FindFirstChildOfClass fun( self : Instance, className : string ) : Instance
+--- @field FindFirstChildWhichIsA fun( self : Instance, className : string, recursive : boolean ) : Instance
+--- @field FindFirstDescendant fun( self : Instance, name : string ) : Instance
+--- @field GetActor fun( self : Instance ) : Actor
+--- @field GetAttribute fun( self : Instance, attribute : string ) : table<any, any>
+--- @field GetAttributeChangedSignal fun( self : Instance, attribute : string ) : RBXScriptSignal
+--- @field GetAttributes fun( self : Instance ) : table<string, any>
+--- @field GetChildren fun( self : Instance ) : Instance[ ]|any[ ]
+--- @field GetDebugId fun( self : Instance, scopeLength : number ) : string
+--- @field GetDescendants fun( self : Instance ) : table<number, any>
+--- @field GetFullName fun( self : Instance ) : string
+--- @field GetPropertyChangedSignal fun( self : Instance, property : string ) : RBXScriptSignal
+--- @field IsA fun( self : Instance, className : string ) : boolean
+--- @field IsAncestorOf fun( self : Instance, descendant : Instance ) : boolean
+--- @field IsDescendantOf fun( self : Instance, ancestor : Instance ) : boolean
+--- @field Remove fun( self : Instance )
+--- @field SetAttribute fun( self : Instance, attribute : string, value : table<any, any> )
+--- @field WaitForChild fun( self : Instance, childName : string, timeOut : number ) : Instance
+--- @field children fun( self : Instance ) : Instance[ ]|any[ ]
+--- @field clone fun( self : Instance ) : Instance
+--- @field destroy fun( self : Instance )
+--- @field findFirstChild fun( self : Instance, name : string, recursive : boolean ) : Instance
+--- @field getChildren fun( self : Instance ) : Instance[ ]|any[ ]
+--- @field isA fun( self : Instance, className : string ) : boolean
+--- @field isDescendantOf fun( self : Instance, ancestor : Instance ) : boolean
+--- @field remove fun( self : Instance )
+--- @field AncestryChanged RBXScriptSignal@fun( child : Instance, parent : Instance )
+--- @field AttributeChanged RBXScriptSignal@fun( attribute : string )
+--- @field Changed RBXScriptSignal@fun( property : string )
+--- @field ChildAdded RBXScriptSignal@fun( child : Instance )
+--- @field ChildRemoved RBXScriptSignal@fun( child : Instance )
+--- @field DescendantAdded RBXScriptSignal@fun( descendant : Instance )
+--- @field DescendantRemoving RBXScriptSignal@fun( descendant : Instance )
+--- @field Destroying RBXScriptSignal@fun( )
+--- @field childAdded RBXScriptSignal@fun( child : Instance )
+
+--}}} End of Instance;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

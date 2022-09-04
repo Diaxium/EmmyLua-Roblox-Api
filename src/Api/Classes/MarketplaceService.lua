@@ -1,0 +1,68 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: MarketplaceService
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ MarketplaceService:
+
+--- @class MarketplaceService : Instance
+--- @field PlayerCanMakePurchases fun( self : MarketplaceService, player : Instance ) : boolean
+--- @field PromptBundlePurchase fun( self : MarketplaceService, player : Instance, bundleId : number )
+--- @field PromptGamePassPurchase fun( self : MarketplaceService, player : Instance, gamePassId : number )
+--- @field PromptNativePurchase fun( self : MarketplaceService, player : Instance, productId : string )
+--- @field PromptPremiumPurchase fun( self : MarketplaceService, player : Instance )
+--- @field PromptProductPurchase fun( self : MarketplaceService, player : Instance, productId : number, equipIfPurchased : boolean, currencyType : Enum.CurrencyType )
+--- @field PromptPurchase fun( self : MarketplaceService, player : Instance, assetId : number, equipIfPurchased : boolean, currencyType : Enum.CurrencyType )
+--- @field PromptRobloxPurchase fun( self : MarketplaceService, assetId : number, equipIfPurchased : boolean )
+--- @field PromptSubscriptionCancellation fun( self : MarketplaceService, player : Instance, subscriptionId : number )
+--- @field PromptSubscriptionPurchase fun( self : MarketplaceService, player : Instance, subscriptionId : number )
+--- @field PromptThirdPartyPurchase fun( self : MarketplaceService, player : Instance, productId : string )
+--- @field ReportAssetSale fun( self : MarketplaceService, assetId : string, robuxAmount : number )
+--- @field ReportRobuxUpsellStarted fun( self : MarketplaceService )
+--- @field SignalAssetTypePurchased fun( self : MarketplaceService, player : Instance, assetType : Enum.AssetType )
+--- @field SignalClientPurchaseSuccess fun( self : MarketplaceService, ticket : string, playerId : number, productId : number )
+--- @field SignalMockPurchasePremium fun( self : MarketplaceService )
+--- @field SignalPromptBundlePurchaseFinished fun( self : MarketplaceService, player : Instance, bundleId : number, success : boolean )
+--- @field SignalPromptGamePassPurchaseFinished fun( self : MarketplaceService, player : Instance, gamePassId : number, success : boolean )
+--- @field SignalPromptPremiumPurchaseFinished fun( self : MarketplaceService, didTryPurchasing : boolean )
+--- @field SignalPromptProductPurchaseFinished fun( self : MarketplaceService, userId : number, productId : number, success : boolean )
+--- @field SignalPromptPurchaseFinished fun( self : MarketplaceService, player : Instance, assetId : number, success : boolean )
+--- @field SignalPromptSubscriptionCancellationFinished fun( self : MarketplaceService, player : Instance, subscriptionId : number, wasCanceled : boolean )
+--- @field SignalPromptSubscriptionPurchaseFinished fun( self : MarketplaceService, player : Instance, subscriptionId : number, wasPurchased : boolean )
+--- @field SignalServerLuaDialogClosed fun( self : MarketplaceService, value : boolean )
+--- @field GetDeveloperProductsAsync fun( self : MarketplaceService ) : Instance
+--- @field GetProductInfo fun( self : MarketplaceService, assetId : number, infoType : Enum.InfoType ) : table<string, any>
+--- @field GetRobuxBalance fun( self : MarketplaceService ) : number
+--- @field IsPlayerSubscribed fun( self : MarketplaceService, player : Instance, subscriptionId : number ) : boolean
+--- @field PerformPurchase fun( self : MarketplaceService, infoType : Enum.InfoType, productId : number, expectedPrice : number, requestId : string, isRobloxPurchase : boolean ) : table<string, any>
+--- @field PlayerOwnsAsset fun( self : MarketplaceService, player : Instance, assetId : number ) : boolean
+--- @field PlayerOwnsBundle fun( self : MarketplaceService, player : Player, bundleId : number ) : boolean
+--- @field UserOwnsGamePassAsync fun( self : MarketplaceService, userId : number, gamePassId : number ) : boolean
+--- @field ClientLuaDialogRequested RBXScriptSignal@fun( arguments : table<any, any> )
+--- @field ClientPurchaseSuccess RBXScriptSignal@fun( ticket : string, playerId : number, productId : number )
+--- @field NativePurchaseFinished RBXScriptSignal@fun( player : Instance, productId : string, wasPurchased : boolean )
+--- @field PromptBundlePurchaseFinished RBXScriptSignal@fun( player : Instance, bundleId : number, wasPurchased : boolean )
+--- @field PromptBundlePurchaseRequested RBXScriptSignal@fun( player : Instance, bundleId : number )
+--- @field PromptGamePassPurchaseFinished RBXScriptSignal@fun( player : Instance, gamePassId : number, wasPurchased : boolean )
+--- @field PromptGamePassPurchaseRequested RBXScriptSignal@fun( player : Instance, gamePassId : number )
+--- @field PromptPremiumPurchaseFinished RBXScriptSignal@fun( )
+--- @field PromptPremiumPurchaseRequested RBXScriptSignal@fun( player : Instance )
+--- @field PromptProductPurchaseFinished RBXScriptSignal@fun( userId : number, productId : number, isPurchased : boolean )
+--- @field PromptProductPurchaseRequested RBXScriptSignal@fun( player : Instance, productId : number, equipIfPurchased : boolean, currencyType : Enum.CurrencyType )
+--- @field PromptPurchaseFinished RBXScriptSignal@fun( player : Instance, assetId : number, isPurchased : boolean )
+--- @field PromptPurchaseRequested RBXScriptSignal@fun( player : Instance, assetId : number, equipIfPurchased : boolean, currencyType : Enum.CurrencyType )
+--- @field PromptRobloxPurchaseRequested RBXScriptSignal@fun( assetId : number, equipIfPurchased : boolean )
+--- @field PromptSubscriptionCancellationFinished RBXScriptSignal@fun( player : Instance, subscriptionId : number, wasCanceled : boolean )
+--- @field PromptSubscriptionCancellationRequested RBXScriptSignal@fun( player : Instance, subscriptionId : number )
+--- @field PromptSubscriptionPurchaseFinished RBXScriptSignal@fun( player : Instance, subscriptionId : number, wasPurchased : boolean )
+--- @field PromptSubscriptionPurchaseRequested RBXScriptSignal@fun( player : Instance, subscriptionId : number )
+--- @field ServerPurchaseVerification RBXScriptSignal@fun( serverResponseTable : table<string, any> )
+--- @field ThirdPartyPurchaseFinished RBXScriptSignal@fun( player : Instance, productId : string, receipt : string, wasPurchased : boolean )
+--- @field ProcessReceipt fun( self : MarketplaceService, receiptInfo : table<string, any> ) : Enum.ProductPurchaseDecision
+
+--}}} End of MarketplaceService;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

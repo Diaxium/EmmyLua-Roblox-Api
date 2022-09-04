@@ -1,0 +1,4251 @@
+{
+    "apiReference": {
+        "__typename": "GlobalReference",
+        "codeSamples": [],
+        "description": "Roblox has several unique built-in functions and variables in its Lua\nimplementation. These are only found on Roblox and are not packaged by default\nwith Lua.\n",
+        "functions": [
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Schedules a function to be executed after `delayTime` seconds have passed,\nwithout yielding the current thread. This function allows multiple Lua\nthreads to be executed in parallel from the same stack. The delay will\nhave a minimum duration of 29 milliseconds, but this minimum may be higher\ndepending on the target framerate and various throttling conditions. If\nthe `delayTime` parameter is not specified, the minimum duration will be\nused.\n",
+                "name": "delay",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "delayTime",
+                        "summary": "The amount of time that this function will be queued before being\nexecuted.\n",
+                        "type": "number"
+                    },
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "callback",
+                        "summary": "The function that will be executed once `delayTime` seconds have\npassed.\n",
+                        "type": "function"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "void"
+                    }
+                ],
+                "summary": "Schedules a function to be called on the next Heartbeat after the given\nduration (in seconds) has passed, with throttling.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the `Class.DebuggerManager` class, which acts as an interface for\nRoblox's Lua debugger feature.\n",
+                "name": "DebuggerManager",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "DebuggerManager"
+                    }
+                ],
+                "summary": "Refers to the DebuggerManager, which acts as an interface for the Lua\ndebugger feature.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns how much time has elapsed since the current instance of Roblox was\nstarted. In Roblox Studio, this begins counting up from the moment Roblox\nStudio starts running, not just when opening a place.\n",
+                "name": "elapsedTime",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    }
+                ],
+                "summary": "Returns the amount of time in seconds that the current instance of Roblox\nhas been running for.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the total memory heap size in kilobytes. The number reflects the\ncurrent heap consumption from the operating system perspective, which\nfluctuates over time as garbage collector frees objects.\n",
+                "name": "gcinfo",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    }
+                ],
+                "summary": "Returns the total memory heap size in kilobytes.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "LoadLibrary cannot be used anymore and will raise an error when called.\nHowever, it is still possible to load the modules that this function once\ndid. Please see\n[this announcement post](https://devforum.roblox.com/t/loadlibrary-is-going-to-be-removed-on-february-3rd/382516)\nabout its removal for more information. You can download\n[this Roblox Model file](https://devforum.roblox.com/uploads/short-url/bSMD1kiXg4uFGtNPDnTo2PpHu1A.rbxmx)\nwhich contains ModuleScripts that provide equivalent libraries.\n\nReturns a built-in Roblox library, based on the libraryName specified.\nThere are currently 3 available libraries:\n\n- RbxGui\n- RbxUtility\n- RbxStamper\n",
+                "name": "LoadLibrary",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "libraryName",
+                        "summary": "The name of the library that should be loaded in.\n",
+                        "type": "string"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "RbxLibrary"
+                    }
+                ],
+                "summary": "Returns a built-in Roblox library by name.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the `Class.PluginManager` which is a deprecated singleton that was\npreviously required to create plugins. It still has applicable uses, such\nas if you need to create a Plugin object from Roblox Studio's command bar.\n",
+                "name": "PluginManager",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "PluginManager"
+                    }
+                ],
+                "summary": "Refers to the PluginManager, a deprecated singleton that was previously\nrequired to create plugins.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Prints `Current identity is [ID]` to the output, where [ID] corresponds to\nthe current thread's security context level.\n",
+                "name": "printidentity",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "\"Current identity is\"",
+                        "name": "prefix",
+                        "summary": "",
+                        "type": "string"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "void"
+                    }
+                ],
+                "summary": "Prints \"Current identity is X\", where X corresponds to the current\nthread's security context level.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Runs the supplied `Class.ModuleScript` if it has not been run already, and\nreturns what the ModuleScript returned (in both cases).\n\nIf the ModuleScript the user wants to use has been uploaded to Roblox\n(with the instance's name being 'MainModule'), it can be loaded by using\nthe require function on the asset ID of the ModuleScript, though only on\nthe server.\n",
+                "name": "require",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "module",
+                        "summary": "The ModuleScript that will be executed to retrieve the return value it\nprovides.\n",
+                        "type": "ModuleScript"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "Variant"
+                    }
+                ],
+                "summary": "Returns the value that was returned by the given ModuleScript, running it\nif it has not been run yet.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the `Class.GlobalSettings` object, which can be used to access the\nsettings objects that are used in Roblox Studio's settings menu.\n",
+                "name": "settings",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "GlobalSettings"
+                    }
+                ],
+                "summary": "Returns the GlobalSettings object, which can be used to access settings\nobjects that configure Roblox Studio's behavior.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Runs the specified callback function in a separate thread, without\nyielding the current thread.\n\nThe function will be executed the next time Roblox's Task Scheduler runs\nan update cycle. This delay will take at least 29 milliseconds but can\narbitrarily take longer, depending on the target framerate and various\nthrottling conditions.\n\nThe callback function is invoked with two arguments:\n\n1. The first being the amount of time which elapsed from when spawn was\n   called to when the function was invoked.\n2. The second being equivalent to elapsedTime() or roughly how long the\n   engine has been running.\n\n```lua\nspawn(print) -- 0.0079617658390703 451.55683163643\n```\n",
+                "name": "spawn",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "callback",
+                        "summary": "The function that will be executed.\n",
+                        "type": "function"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "void"
+                    }
+                ],
+                "summary": "Calls a function immediately through the engine scheduler, with\nthrottling.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the `Class.Stats` service. It is preferred that developers use\n`Class.ServiceProvider:GetService()` to retrieve it instead.\n",
+                "name": "stats",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "Stats"
+                    }
+                ],
+                "summary": "Returns the Stats service.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns how much time has elapsed, in seconds, since the UNIX epoch, on\nthe current local session's computer. The UNIX epoch is represented by the\ndate January 1st, 1970.\n",
+                "name": "tick",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    }
+                ],
+                "summary": "Returns the amount of time in seconds since the Unix epoch according to\nthis device's time.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the amount of time, in seconds, that has elapsed since the current\ngame instance started running. If the current game instance is not\nrunning, this will be `0`.\n",
+                "name": "time",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    }
+                ],
+                "summary": "Returns the amount of time in seconds that has elapsed since the current\ngame instance started running.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the type of the object specified, as a string. This function is\nmore accurate than Lua's native `type` function, as it does not denote\nRoblox-specific types as `userdata`.\n",
+                "name": "typeof",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "object",
+                        "summary": "The Lua type that will have its type checked.\n",
+                        "type": "Variant"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "string"
+                    }
+                ],
+                "summary": "Returns the type of the given object as a string, also supporting\nRoblox-specific types (e.g. Vector3).\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the `Class.UserSettings` object, which is used to read information\nfrom the current user's game menu settings.\n",
+                "name": "UserSettings",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "UserSettings"
+                    }
+                ],
+                "summary": "Returns the UserSettings object, which is used to read information from\nthe current user's game menu settings.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Returns the current version of Roblox as a string. The integers in the\nversion string are separated by periods, and each integers represent the\nfollowing, in order:\n\n- Generation - The current generation of the application shell that is\n  hosting the client.\n- Version - The current release version of Roblox.\n- Patch - The current patch number for this version of Roblox.\n- Commit - The ID of the last internal commit that was accepted into this\n  version of the client.\n",
+                "name": "version",
+                "parameters": [],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "string"
+                    }
+                ],
+                "summary": "Returns the current version of Roblox as a string, which includes the\ngeneration, version, patch and commit.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Yields the current thread until the specified amount of seconds have\nelapsed.\n\nThe delay will have a minimum duration of 29 milliseconds, but this\nminimum may be higher depending on the target framerate and various\nthrottling conditions. If the `seconds` parameter is not specified, the\nminimum duration will be used. This function returns:\n\n- Actual time yielded (in seconds).\n- Total time since the software was initialized (in seconds).\n",
+                "name": "wait",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "\"0.03\"",
+                        "name": "seconds",
+                        "summary": "Specifies how long the thread should yield for.\n",
+                        "type": "number"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    },
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "number"
+                    }
+                ],
+                "summary": "Yields the current thread until the specified amount of time in seconds\nhave elapsed, with throttling.\n",
+                "tags": []
+            },
+            {
+                "__typename": "Function",
+                "codeSamples": null,
+                "description": "Behaves identically to Lua's print function, except the output is styled\nas a warning, with yellow text and a timestamp. This function accepts any\nnumber of arguments, and will attempt to convert them into strings which\nwill then be joined together with spaces between them.\n",
+                "name": "warn",
+                "parameters": [
+                    {
+                        "__typename": "Parameter",
+                        "default": "",
+                        "name": "params",
+                        "summary": "This function accepts any number of arguments, and will attempt to\nconvert them into strings which will then be joined together with\nspaces between them.\n",
+                        "type": "Tuple"
+                    }
+                ],
+                "returns": [
+                    {
+                        "__typename": "Return",
+                        "summary": "",
+                        "type": "void"
+                    }
+                ],
+                "summary": "Behaves similarly to print, except with more distinct formatting (yellow);\nintended for messages which describe potential problems.\n",
+                "tags": []
+            }
+        ],
+        "id": "RobloxGlobals",
+        "locale": "EN_US",
+        "name": "Roblox Globals",
+        "properties": [
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A reference to the Enums datatype, which stores all of the available enums\nthat can be used on Roblox.\n",
+                "name": "Enum",
+                "summary": "Contains all Enum objects.\n",
+                "tags": [],
+                "type": "Enums"
+            },
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A reference to the `Class.DataModel`, which is the root Instance of\nRoblox's parent/child hierarchy.\n",
+                "name": "game",
+                "summary": "Refers to the DataModel singleton, the root instance of a place's\nhierarchy.\n",
+                "tags": [],
+                "type": "DataModel"
+            },
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A reference to the `Class.Plugin` object that represents the plugin being\nran from this `Class.Script`. This reference only exists in the context\nwhere a script is executed as a plugin.\n",
+                "name": "plugin",
+                "summary": "Refers to a Plugin singleton when the code is run in the context of a\nStudio plugin.\n",
+                "tags": [],
+                "type": "Plugin"
+            },
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A table that is shared across all scripts that share the same execution\ncontext level. This serves the exact same purpose as `_G`.\n",
+                "name": "shared",
+                "summary": "A table shared between all code running at the same execution context\nlevel.\n",
+                "tags": [],
+                "type": "Array"
+            },
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A reference to the script object that is executing the code you are\nwriting. It can be either a `Class.Script`, a `Class.LocalScript`, or a\n`Class.ModuleScript` (and sometimes a `Class.CoreScript`). This variable\nis not available when executing code from Roblox Studio's command bar.\n",
+                "name": "script",
+                "summary": "A reference to the LuaSourceContainer object (Script, LocalScript, or\nModuleScript) that is executing this code.\n",
+                "tags": [],
+                "type": "LuaSourceContainer"
+            },
+            {
+                "__typename": "Property",
+                "codeSamples": null,
+                "description": "A reference to the `Class.Workspace` service, which contains all of the\nphysical components of a Roblox world.\n",
+                "name": "workspace",
+                "summary": "A reference to the Workspace service, which contains all of the physical\ncomponents of a place.\n",
+                "tags": [],
+                "type": "Workspace"
+            }
+        ],
+        "slug": "RobloxGlobals",
+        "summary": "Built-in functions and constants unique to Roblox.\n",
+        "type": "GLOBAL"
+    },
+    "navigation": [
+        {
+            "heading": "CLASS",
+            "navigation": [
+                {
+                    "title": "Accessory",
+                    "path": "classes/Accessory"
+                },
+                {
+                    "title": "Accoutrement",
+                    "path": "classes/Accoutrement"
+                },
+                {
+                    "title": "Actor",
+                    "path": "classes/Actor"
+                },
+                {
+                    "title": "AdGui",
+                    "path": "classes/AdGui"
+                },
+                {
+                    "title": "AdPortal",
+                    "path": "classes/AdPortal"
+                },
+                {
+                    "title": "AdService",
+                    "path": "classes/AdService"
+                },
+                {
+                    "title": "AdvancedDragger",
+                    "path": "classes/AdvancedDragger"
+                },
+                {
+                    "title": "AirController",
+                    "path": "classes/AirController"
+                },
+                {
+                    "title": "AlignOrientation",
+                    "path": "classes/AlignOrientation"
+                },
+                {
+                    "title": "AlignPosition",
+                    "path": "classes/AlignPosition"
+                },
+                {
+                    "title": "AnalysticsSettings",
+                    "path": "classes/AnalysticsSettings"
+                },
+                {
+                    "title": "AnalyticsService",
+                    "path": "classes/AnalyticsService"
+                },
+                {
+                    "title": "AngularVelocity",
+                    "path": "classes/AngularVelocity"
+                },
+                {
+                    "title": "Animation",
+                    "path": "classes/Animation"
+                },
+                {
+                    "title": "AnimationClip",
+                    "path": "classes/AnimationClip"
+                },
+                {
+                    "title": "AnimationClipProvider",
+                    "path": "classes/AnimationClipProvider"
+                },
+                {
+                    "title": "AnimationController",
+                    "path": "classes/AnimationController"
+                },
+                {
+                    "title": "AnimationFromVideoCreatorService",
+                    "path": "classes/AnimationFromVideoCreatorService"
+                },
+                {
+                    "title": "AnimationFromVideoCreatorStudioService",
+                    "path": "classes/AnimationFromVideoCreatorStudioService"
+                },
+                {
+                    "title": "AnimationRigData",
+                    "path": "classes/AnimationRigData"
+                },
+                {
+                    "title": "AnimationStreamTrack",
+                    "path": "classes/AnimationStreamTrack"
+                },
+                {
+                    "title": "AnimationTrack",
+                    "path": "classes/AnimationTrack"
+                },
+                {
+                    "title": "Animator",
+                    "path": "classes/Animator"
+                },
+                {
+                    "title": "AppStorageService",
+                    "path": "classes/AppStorageService"
+                },
+                {
+                    "title": "AppUpdateService",
+                    "path": "classes/AppUpdateService"
+                },
+                {
+                    "title": "ArcHandles",
+                    "path": "classes/ArcHandles"
+                },
+                {
+                    "title": "AssetCounterService",
+                    "path": "classes/AssetCounterService"
+                },
+                {
+                    "title": "AssetDeliveryProxy",
+                    "path": "classes/AssetDeliveryProxy"
+                },
+                {
+                    "title": "AssetImportService",
+                    "path": "classes/AssetImportService"
+                },
+                {
+                    "title": "AssetImportSession",
+                    "path": "classes/AssetImportSession"
+                },
+                {
+                    "title": "AssetManagerService",
+                    "path": "classes/AssetManagerService"
+                },
+                {
+                    "title": "AssetService",
+                    "path": "classes/AssetService"
+                },
+                {
+                    "title": "AssetSoundEffect",
+                    "path": "classes/AssetSoundEffect"
+                },
+                {
+                    "title": "Atmosphere",
+                    "path": "classes/Atmosphere"
+                },
+                {
+                    "title": "Attachment",
+                    "path": "classes/Attachment"
+                },
+                {
+                    "title": "AvatarEditorService",
+                    "path": "classes/AvatarEditorService"
+                },
+                {
+                    "title": "AvatarImportService",
+                    "path": "classes/AvatarImportService"
+                },
+                {
+                    "title": "Backpack",
+                    "path": "classes/Backpack"
+                },
+                {
+                    "title": "BackpackItem",
+                    "path": "classes/BackpackItem"
+                },
+                {
+                    "title": "BadgeService",
+                    "path": "classes/BadgeService"
+                },
+                {
+                    "title": "BallSocketConstraint",
+                    "path": "classes/BallSocketConstraint"
+                },
+                {
+                    "title": "BasePart",
+                    "path": "classes/BasePart"
+                },
+                {
+                    "title": "BasePlayerGui",
+                    "path": "classes/BasePlayerGui"
+                },
+                {
+                    "title": "BaseScript",
+                    "path": "classes/BaseScript"
+                },
+                {
+                    "title": "BaseWrap",
+                    "path": "classes/BaseWrap"
+                },
+                {
+                    "title": "Beam",
+                    "path": "classes/Beam"
+                },
+                {
+                    "title": "BevelMesh",
+                    "path": "classes/BevelMesh"
+                },
+                {
+                    "title": "BillboardGui",
+                    "path": "classes/BillboardGui"
+                },
+                {
+                    "title": "BinaryStringValue",
+                    "path": "classes/BinaryStringValue"
+                },
+                {
+                    "title": "BindableEvent",
+                    "path": "classes/BindableEvent"
+                },
+                {
+                    "title": "BindableFunction",
+                    "path": "classes/BindableFunction"
+                },
+                {
+                    "title": "BlockMesh",
+                    "path": "classes/BlockMesh"
+                },
+                {
+                    "title": "BloomEffect",
+                    "path": "classes/BloomEffect"
+                },
+                {
+                    "title": "BlurEffect",
+                    "path": "classes/BlurEffect"
+                },
+                {
+                    "title": "BodyAngularVelocity",
+                    "path": "classes/BodyAngularVelocity"
+                },
+                {
+                    "title": "BodyColors",
+                    "path": "classes/BodyColors"
+                },
+                {
+                    "title": "BodyForce",
+                    "path": "classes/BodyForce"
+                },
+                {
+                    "title": "BodyGyro",
+                    "path": "classes/BodyGyro"
+                },
+                {
+                    "title": "BodyMover",
+                    "path": "classes/BodyMover"
+                },
+                {
+                    "title": "BodyPosition",
+                    "path": "classes/BodyPosition"
+                },
+                {
+                    "title": "BodyThrust",
+                    "path": "classes/BodyThrust"
+                },
+                {
+                    "title": "BodyVelocity",
+                    "path": "classes/BodyVelocity"
+                },
+                {
+                    "title": "Bone",
+                    "path": "classes/Bone"
+                },
+                {
+                    "title": "BoolValue",
+                    "path": "classes/BoolValue"
+                },
+                {
+                    "title": "BoxHandleAdornment",
+                    "path": "classes/BoxHandleAdornment"
+                },
+                {
+                    "title": "Breakpoint",
+                    "path": "classes/Breakpoint"
+                },
+                {
+                    "title": "BrickColorValue",
+                    "path": "classes/BrickColorValue"
+                },
+                {
+                    "title": "BrowserService",
+                    "path": "classes/BrowserService"
+                },
+                {
+                    "title": "BulkImportService",
+                    "path": "classes/BulkImportService"
+                },
+                {
+                    "title": "CFrameValue",
+                    "path": "classes/CFrameValue"
+                },
+                {
+                    "title": "CSGDictionaryService",
+                    "path": "classes/CSGDictionaryService"
+                },
+                {
+                    "title": "CacheableContentProvider",
+                    "path": "classes/CacheableContentProvider"
+                },
+                {
+                    "title": "CalloutService",
+                    "path": "classes/CalloutService"
+                },
+                {
+                    "title": "Camera",
+                    "path": "classes/Camera"
+                },
+                {
+                    "title": "CanvasGroup",
+                    "path": "classes/CanvasGroup"
+                },
+                {
+                    "title": "CatalogPages",
+                    "path": "classes/CatalogPages"
+                },
+                {
+                    "title": "ChangeHistoryService",
+                    "path": "classes/ChangeHistoryService"
+                },
+                {
+                    "title": "ChannelSelectorSoundEffect",
+                    "path": "classes/ChannelSelectorSoundEffect"
+                },
+                {
+                    "title": "CharacterAppearance",
+                    "path": "classes/CharacterAppearance"
+                },
+                {
+                    "title": "CharacterMesh",
+                    "path": "classes/CharacterMesh"
+                },
+                {
+                    "title": "Chat",
+                    "path": "classes/Chat"
+                },
+                {
+                    "title": "ChatInputBarConfiguration",
+                    "path": "classes/ChatInputBarConfiguration"
+                },
+                {
+                    "title": "ChatWindowConfiguration",
+                    "path": "classes/ChatWindowConfiguration"
+                },
+                {
+                    "title": "ChorusSoundEffect",
+                    "path": "classes/ChorusSoundEffect"
+                },
+                {
+                    "title": "ClickDetector",
+                    "path": "classes/ClickDetector"
+                },
+                {
+                    "title": "ClientReplicator",
+                    "path": "classes/ClientReplicator"
+                },
+                {
+                    "title": "ClimbController",
+                    "path": "classes/ClimbController"
+                },
+                {
+                    "title": "Clothing",
+                    "path": "classes/Clothing"
+                },
+                {
+                    "title": "Clouds",
+                    "path": "classes/Clouds"
+                },
+                {
+                    "title": "ClusterPacketCache",
+                    "path": "classes/ClusterPacketCache"
+                },
+                {
+                    "title": "CollectionService",
+                    "path": "classes/CollectionService"
+                },
+                {
+                    "title": "Color3Value",
+                    "path": "classes/Color3Value"
+                },
+                {
+                    "title": "ColorCorrectionEffect",
+                    "path": "classes/ColorCorrectionEffect"
+                },
+                {
+                    "title": "CommandInstance",
+                    "path": "classes/CommandInstance"
+                },
+                {
+                    "title": "CommandService",
+                    "path": "classes/CommandService"
+                },
+                {
+                    "title": "CompressorSoundEffect",
+                    "path": "classes/CompressorSoundEffect"
+                },
+                {
+                    "title": "ConeHandleAdornment",
+                    "path": "classes/ConeHandleAdornment"
+                },
+                {
+                    "title": "Configuration",
+                    "path": "classes/Configuration"
+                },
+                {
+                    "title": "ConfigureServerService",
+                    "path": "classes/ConfigureServerService"
+                },
+                {
+                    "title": "Constraint",
+                    "path": "classes/Constraint"
+                },
+                {
+                    "title": "ContentProvider",
+                    "path": "classes/ContentProvider"
+                },
+                {
+                    "title": "ContextActionService",
+                    "path": "classes/ContextActionService"
+                },
+                {
+                    "title": "Controller",
+                    "path": "classes/Controller"
+                },
+                {
+                    "title": "ControllerBase",
+                    "path": "classes/ControllerBase"
+                },
+                {
+                    "title": "ControllerManager",
+                    "path": "classes/ControllerManager"
+                },
+                {
+                    "title": "ControllerService",
+                    "path": "classes/ControllerService"
+                },
+                {
+                    "title": "CookiesService",
+                    "path": "classes/CookiesService"
+                },
+                {
+                    "title": "CoreGui",
+                    "path": "classes/CoreGui"
+                },
+                {
+                    "title": "CorePackages",
+                    "path": "classes/CorePackages"
+                },
+                {
+                    "title": "CoreScript",
+                    "path": "classes/CoreScript"
+                },
+                {
+                    "title": "CoreScriptSyncService",
+                    "path": "classes/CoreScriptSyncService"
+                },
+                {
+                    "title": "CornerWedgePart",
+                    "path": "classes/CornerWedgePart"
+                },
+                {
+                    "title": "CrossDMScriptChangeListener",
+                    "path": "classes/CrossDMScriptChangeListener"
+                },
+                {
+                    "title": "CurveAnimation",
+                    "path": "classes/CurveAnimation"
+                },
+                {
+                    "title": "CustomEvent",
+                    "path": "classes/CustomEvent"
+                },
+                {
+                    "title": "CustomEventReceiver",
+                    "path": "classes/CustomEventReceiver"
+                },
+                {
+                    "title": "CustomSoundEffect",
+                    "path": "classes/CustomSoundEffect"
+                },
+                {
+                    "title": "CylinderHandleAdornment",
+                    "path": "classes/CylinderHandleAdornment"
+                },
+                {
+                    "title": "CylinderMesh",
+                    "path": "classes/CylinderMesh"
+                },
+                {
+                    "title": "CylindricalConstraint",
+                    "path": "classes/CylindricalConstraint"
+                },
+                {
+                    "title": "DataModel",
+                    "path": "classes/DataModel"
+                },
+                {
+                    "title": "DataModelMesh",
+                    "path": "classes/DataModelMesh"
+                },
+                {
+                    "title": "DataModelPatchService",
+                    "path": "classes/DataModelPatchService"
+                },
+                {
+                    "title": "DataModelSession",
+                    "path": "classes/DataModelSession"
+                },
+                {
+                    "title": "DataStore",
+                    "path": "classes/DataStore"
+                },
+                {
+                    "title": "DataStoreIncrementOptions",
+                    "path": "classes/DataStoreIncrementOptions"
+                },
+                {
+                    "title": "DataStoreInfo",
+                    "path": "classes/DataStoreInfo"
+                },
+                {
+                    "title": "DataStoreKey",
+                    "path": "classes/DataStoreKey"
+                },
+                {
+                    "title": "DataStoreKeyInfo",
+                    "path": "classes/DataStoreKeyInfo"
+                },
+                {
+                    "title": "DataStoreKeyPages",
+                    "path": "classes/DataStoreKeyPages"
+                },
+                {
+                    "title": "DataStoreListingPages",
+                    "path": "classes/DataStoreListingPages"
+                },
+                {
+                    "title": "DataStoreObjectVersionInfo",
+                    "path": "classes/DataStoreObjectVersionInfo"
+                },
+                {
+                    "title": "DataStoreOptions",
+                    "path": "classes/DataStoreOptions"
+                },
+                {
+                    "title": "DataStorePages",
+                    "path": "classes/DataStorePages"
+                },
+                {
+                    "title": "DataStoreService",
+                    "path": "classes/DataStoreService"
+                },
+                {
+                    "title": "DataStoreSetOptions",
+                    "path": "classes/DataStoreSetOptions"
+                },
+                {
+                    "title": "DataStoreVersionPages",
+                    "path": "classes/DataStoreVersionPages"
+                },
+                {
+                    "title": "Debris",
+                    "path": "classes/Debris"
+                },
+                {
+                    "title": "DebugSettings",
+                    "path": "classes/DebugSettings"
+                },
+                {
+                    "title": "DebuggablePluginWatcher",
+                    "path": "classes/DebuggablePluginWatcher"
+                },
+                {
+                    "title": "DebuggerBreakpoint",
+                    "path": "classes/DebuggerBreakpoint"
+                },
+                {
+                    "title": "DebuggerConnection",
+                    "path": "classes/DebuggerConnection"
+                },
+                {
+                    "title": "DebuggerConnectionManager",
+                    "path": "classes/DebuggerConnectionManager"
+                },
+                {
+                    "title": "DebuggerLuaResponse",
+                    "path": "classes/DebuggerLuaResponse"
+                },
+                {
+                    "title": "DebuggerManager",
+                    "path": "classes/DebuggerManager"
+                },
+                {
+                    "title": "DebuggerUIService",
+                    "path": "classes/DebuggerUIService"
+                },
+                {
+                    "title": "DebuggerVariable",
+                    "path": "classes/DebuggerVariable"
+                },
+                {
+                    "title": "DebuggerWatch",
+                    "path": "classes/DebuggerWatch"
+                },
+                {
+                    "title": "Decal",
+                    "path": "classes/Decal"
+                },
+                {
+                    "title": "DepthOfFieldEffect",
+                    "path": "classes/DepthOfFieldEffect"
+                },
+                {
+                    "title": "DeviceIdService",
+                    "path": "classes/DeviceIdService"
+                },
+                {
+                    "title": "Dialog",
+                    "path": "classes/Dialog"
+                },
+                {
+                    "title": "DialogChoice",
+                    "path": "classes/DialogChoice"
+                },
+                {
+                    "title": "DistortionSoundEffect",
+                    "path": "classes/DistortionSoundEffect"
+                },
+                {
+                    "title": "DockWidgetPluginGui",
+                    "path": "classes/DockWidgetPluginGui"
+                },
+                {
+                    "title": "DoubleConstrainedValue",
+                    "path": "classes/DoubleConstrainedValue"
+                },
+                {
+                    "title": "DraftsService",
+                    "path": "classes/DraftsService"
+                },
+                {
+                    "title": "Dragger",
+                    "path": "classes/Dragger"
+                },
+                {
+                    "title": "DraggerService",
+                    "path": "classes/DraggerService"
+                },
+                {
+                    "title": "DynamicRotate",
+                    "path": "classes/DynamicRotate"
+                },
+                {
+                    "title": "EchoSoundEffect",
+                    "path": "classes/EchoSoundEffect"
+                },
+                {
+                    "title": "EmotesPages",
+                    "path": "classes/EmotesPages"
+                },
+                {
+                    "title": "EqualizerSoundEffect",
+                    "path": "classes/EqualizerSoundEffect"
+                },
+                {
+                    "title": "EulerRotationCurve",
+                    "path": "classes/EulerRotationCurve"
+                },
+                {
+                    "title": "EventIngestService",
+                    "path": "classes/EventIngestService"
+                },
+                {
+                    "title": "Explosion",
+                    "path": "classes/Explosion"
+                },
+                {
+                    "title": "FaceAnimatorService",
+                    "path": "classes/FaceAnimatorService"
+                },
+                {
+                    "title": "FaceControls",
+                    "path": "classes/FaceControls"
+                },
+                {
+                    "title": "FaceInstance",
+                    "path": "classes/FaceInstance"
+                },
+                {
+                    "title": "FacialAnimationRecordingService",
+                    "path": "classes/FacialAnimationRecordingService"
+                },
+                {
+                    "title": "FacialAnimationStreamingService",
+                    "path": "classes/FacialAnimationStreamingService"
+                },
+                {
+                    "title": "Feature",
+                    "path": "classes/Feature"
+                },
+                {
+                    "title": "File",
+                    "path": "classes/File"
+                },
+                {
+                    "title": "FileMesh",
+                    "path": "classes/FileMesh"
+                },
+                {
+                    "title": "Fire",
+                    "path": "classes/Fire"
+                },
+                {
+                    "title": "Flag",
+                    "path": "classes/Flag"
+                },
+                {
+                    "title": "FlagStand",
+                    "path": "classes/FlagStand"
+                },
+                {
+                    "title": "FlagStandService",
+                    "path": "classes/FlagStandService"
+                },
+                {
+                    "title": "FlangeSoundEffect",
+                    "path": "classes/FlangeSoundEffect"
+                },
+                {
+                    "title": "FloatCurve",
+                    "path": "classes/FloatCurve"
+                },
+                {
+                    "title": "FloorWire",
+                    "path": "classes/FloorWire"
+                },
+                {
+                    "title": "FlyweightService",
+                    "path": "classes/FlyweightService"
+                },
+                {
+                    "title": "Folder",
+                    "path": "classes/Folder"
+                },
+                {
+                    "title": "ForceField",
+                    "path": "classes/ForceField"
+                },
+                {
+                    "title": "FormFactorPart",
+                    "path": "classes/FormFactorPart"
+                },
+                {
+                    "title": "Frame",
+                    "path": "classes/Frame"
+                },
+                {
+                    "title": "FriendPages",
+                    "path": "classes/FriendPages"
+                },
+                {
+                    "title": "FriendService",
+                    "path": "classes/FriendService"
+                },
+                {
+                    "title": "FunctionalTest",
+                    "path": "classes/FunctionalTest"
+                },
+                {
+                    "title": "GamePassService",
+                    "path": "classes/GamePassService"
+                },
+                {
+                    "title": "GameSettings",
+                    "path": "classes/GameSettings"
+                },
+                {
+                    "title": "GamepadService",
+                    "path": "classes/GamepadService"
+                },
+                {
+                    "title": "GenericSettings",
+                    "path": "classes/GenericSettings"
+                },
+                {
+                    "title": "Geometry",
+                    "path": "classes/Geometry"
+                },
+                {
+                    "title": "GetTextBoundsParams",
+                    "path": "classes/GetTextBoundsParams"
+                },
+                {
+                    "title": "GlobalDataStore",
+                    "path": "classes/GlobalDataStore"
+                },
+                {
+                    "title": "GlobalSettings",
+                    "path": "classes/GlobalSettings"
+                },
+                {
+                    "title": "Glue",
+                    "path": "classes/Glue"
+                },
+                {
+                    "title": "GoogleAnalyticsConfiguration",
+                    "path": "classes/GoogleAnalyticsConfiguration"
+                },
+                {
+                    "title": "GroundController",
+                    "path": "classes/GroundController"
+                },
+                {
+                    "title": "GroupService",
+                    "path": "classes/GroupService"
+                },
+                {
+                    "title": "GuiBase",
+                    "path": "classes/GuiBase"
+                },
+                {
+                    "title": "GuiBase2d",
+                    "path": "classes/GuiBase2d"
+                },
+                {
+                    "title": "GuiBase3d",
+                    "path": "classes/GuiBase3d"
+                },
+                {
+                    "title": "GuiButton",
+                    "path": "classes/GuiButton"
+                },
+                {
+                    "title": "GuiLabel",
+                    "path": "classes/GuiLabel"
+                },
+                {
+                    "title": "GuiMain",
+                    "path": "classes/GuiMain"
+                },
+                {
+                    "title": "GuiObject",
+                    "path": "classes/GuiObject"
+                },
+                {
+                    "title": "GuiService",
+                    "path": "classes/GuiService"
+                },
+                {
+                    "title": "GuidRegistryService",
+                    "path": "classes/GuidRegistryService"
+                },
+                {
+                    "title": "HSRDataContentProvider",
+                    "path": "classes/HSRDataContentProvider"
+                },
+                {
+                    "title": "HandleAdornment",
+                    "path": "classes/HandleAdornment"
+                },
+                {
+                    "title": "Handles",
+                    "path": "classes/Handles"
+                },
+                {
+                    "title": "HandlesBase",
+                    "path": "classes/HandlesBase"
+                },
+                {
+                    "title": "HapticService",
+                    "path": "classes/HapticService"
+                },
+                {
+                    "title": "Hat",
+                    "path": "classes/Hat"
+                },
+                {
+                    "title": "HeightmapImporterService",
+                    "path": "classes/HeightmapImporterService"
+                },
+                {
+                    "title": "HiddenSurfaceRemovalAsset",
+                    "path": "classes/HiddenSurfaceRemovalAsset"
+                },
+                {
+                    "title": "Highlight",
+                    "path": "classes/Highlight"
+                },
+                {
+                    "title": "HingeConstraint",
+                    "path": "classes/HingeConstraint"
+                },
+                {
+                    "title": "Hint",
+                    "path": "classes/Hint"
+                },
+                {
+                    "title": "Hole",
+                    "path": "classes/Hole"
+                },
+                {
+                    "title": "Hopper",
+                    "path": "classes/Hopper"
+                },
+                {
+                    "title": "HopperBin",
+                    "path": "classes/HopperBin"
+                },
+                {
+                    "title": "HttpRbxApiService",
+                    "path": "classes/HttpRbxApiService"
+                },
+                {
+                    "title": "HttpRequest",
+                    "path": "classes/HttpRequest"
+                },
+                {
+                    "title": "HttpService",
+                    "path": "classes/HttpService"
+                },
+                {
+                    "title": "Humanoid",
+                    "path": "classes/Humanoid"
+                },
+                {
+                    "title": "HumanoidController",
+                    "path": "classes/HumanoidController"
+                },
+                {
+                    "title": "HumanoidDescription",
+                    "path": "classes/HumanoidDescription"
+                },
+                {
+                    "title": "IKControl",
+                    "path": "classes/IKControl"
+                },
+                {
+                    "title": "ILegacyStudioBridge",
+                    "path": "classes/ILegacyStudioBridge"
+                },
+                {
+                    "title": "IXPService",
+                    "path": "classes/IXPService"
+                },
+                {
+                    "title": "ImageButton",
+                    "path": "classes/ImageButton"
+                },
+                {
+                    "title": "ImageHandleAdornment",
+                    "path": "classes/ImageHandleAdornment"
+                },
+                {
+                    "title": "ImageLabel",
+                    "path": "classes/ImageLabel"
+                },
+                {
+                    "title": "ImporterAnimationSettings",
+                    "path": "classes/ImporterAnimationSettings"
+                },
+                {
+                    "title": "ImporterBaseSettings",
+                    "path": "classes/ImporterBaseSettings"
+                },
+                {
+                    "title": "ImporterFacsSettings",
+                    "path": "classes/ImporterFacsSettings"
+                },
+                {
+                    "title": "ImporterGroupSettings",
+                    "path": "classes/ImporterGroupSettings"
+                },
+                {
+                    "title": "ImporterJointSettings",
+                    "path": "classes/ImporterJointSettings"
+                },
+                {
+                    "title": "ImporterMaterialSettings",
+                    "path": "classes/ImporterMaterialSettings"
+                },
+                {
+                    "title": "ImporterMeshSettings",
+                    "path": "classes/ImporterMeshSettings"
+                },
+                {
+                    "title": "ImporterRootSettings",
+                    "path": "classes/ImporterRootSettings"
+                },
+                {
+                    "title": "IncrementalPatchBuilder",
+                    "path": "classes/IncrementalPatchBuilder"
+                },
+                {
+                    "title": "InputObject",
+                    "path": "classes/InputObject"
+                },
+                {
+                    "title": "InsertService",
+                    "path": "classes/InsertService"
+                },
+                {
+                    "title": "Instance",
+                    "path": "classes/Instance"
+                },
+                {
+                    "title": "InstanceAdornment",
+                    "path": "classes/InstanceAdornment"
+                },
+                {
+                    "title": "IntConstrainedValue",
+                    "path": "classes/IntConstrainedValue"
+                },
+                {
+                    "title": "IntValue",
+                    "path": "classes/IntValue"
+                },
+                {
+                    "title": "InventoryPages",
+                    "path": "classes/InventoryPages"
+                },
+                {
+                    "title": "JointInstance",
+                    "path": "classes/JointInstance"
+                },
+                {
+                    "title": "JointsService",
+                    "path": "classes/JointsService"
+                },
+                {
+                    "title": "KeyboardService",
+                    "path": "classes/KeyboardService"
+                },
+                {
+                    "title": "Keyframe",
+                    "path": "classes/Keyframe"
+                },
+                {
+                    "title": "KeyframeMarker",
+                    "path": "classes/KeyframeMarker"
+                },
+                {
+                    "title": "KeyframeSequence",
+                    "path": "classes/KeyframeSequence"
+                },
+                {
+                    "title": "KeyframeSequenceProvider",
+                    "path": "classes/KeyframeSequenceProvider"
+                },
+                {
+                    "title": "LSPFileSyncService",
+                    "path": "classes/LSPFileSyncService"
+                },
+                {
+                    "title": "LanguageService",
+                    "path": "classes/LanguageService"
+                },
+                {
+                    "title": "LayerCollector",
+                    "path": "classes/LayerCollector"
+                },
+                {
+                    "title": "LegacyStudioBridge",
+                    "path": "classes/LegacyStudioBridge"
+                },
+                {
+                    "title": "Light",
+                    "path": "classes/Light"
+                },
+                {
+                    "title": "Lighting",
+                    "path": "classes/Lighting"
+                },
+                {
+                    "title": "LineForce",
+                    "path": "classes/LineForce"
+                },
+                {
+                    "title": "LineHandleAdornment",
+                    "path": "classes/LineHandleAdornment"
+                },
+                {
+                    "title": "LinearVelocity",
+                    "path": "classes/LinearVelocity"
+                },
+                {
+                    "title": "LocalDebuggerConnection",
+                    "path": "classes/LocalDebuggerConnection"
+                },
+                {
+                    "title": "LocalScript",
+                    "path": "classes/LocalScript"
+                },
+                {
+                    "title": "LocalStorageService",
+                    "path": "classes/LocalStorageService"
+                },
+                {
+                    "title": "LocalizationService",
+                    "path": "classes/LocalizationService"
+                },
+                {
+                    "title": "LocalizationTable",
+                    "path": "classes/LocalizationTable"
+                },
+                {
+                    "title": "LodDataEntity",
+                    "path": "classes/LodDataEntity"
+                },
+                {
+                    "title": "LodDataService",
+                    "path": "classes/LodDataService"
+                },
+                {
+                    "title": "LogService",
+                    "path": "classes/LogService"
+                },
+                {
+                    "title": "LoginService",
+                    "path": "classes/LoginService"
+                },
+                {
+                    "title": "LuaSettings",
+                    "path": "classes/LuaSettings"
+                },
+                {
+                    "title": "LuaSourceContainer",
+                    "path": "classes/LuaSourceContainer"
+                },
+                {
+                    "title": "LuaWebService",
+                    "path": "classes/LuaWebService"
+                },
+                {
+                    "title": "LuauScriptAnalyzerService",
+                    "path": "classes/LuauScriptAnalyzerService"
+                },
+                {
+                    "title": "ManualGlue",
+                    "path": "classes/ManualGlue"
+                },
+                {
+                    "title": "ManualSurfaceJointInstance",
+                    "path": "classes/ManualSurfaceJointInstance"
+                },
+                {
+                    "title": "ManualWeld",
+                    "path": "classes/ManualWeld"
+                },
+                {
+                    "title": "MarkerCurve",
+                    "path": "classes/MarkerCurve"
+                },
+                {
+                    "title": "MarketplaceService",
+                    "path": "classes/MarketplaceService"
+                },
+                {
+                    "title": "MaterialService",
+                    "path": "classes/MaterialService"
+                },
+                {
+                    "title": "MaterialVariant",
+                    "path": "classes/MaterialVariant"
+                },
+                {
+                    "title": "MemStorageConnection",
+                    "path": "classes/MemStorageConnection"
+                },
+                {
+                    "title": "MemStorageService",
+                    "path": "classes/MemStorageService"
+                },
+                {
+                    "title": "MemoryStoreQueue",
+                    "path": "classes/MemoryStoreQueue"
+                },
+                {
+                    "title": "MemoryStoreService",
+                    "path": "classes/MemoryStoreService"
+                },
+                {
+                    "title": "MemoryStoreSortedMap",
+                    "path": "classes/MemoryStoreSortedMap"
+                },
+                {
+                    "title": "MeshContentProvider",
+                    "path": "classes/MeshContentProvider"
+                },
+                {
+                    "title": "MeshPart",
+                    "path": "classes/MeshPart"
+                },
+                {
+                    "title": "Message",
+                    "path": "classes/Message"
+                },
+                {
+                    "title": "MessageBusConnection",
+                    "path": "classes/MessageBusConnection"
+                },
+                {
+                    "title": "MessageBusService",
+                    "path": "classes/MessageBusService"
+                },
+                {
+                    "title": "MessagingService",
+                    "path": "classes/MessagingService"
+                },
+                {
+                    "title": "MetaBreakpoint",
+                    "path": "classes/MetaBreakpoint"
+                },
+                {
+                    "title": "MetaBreakpointContext",
+                    "path": "classes/MetaBreakpointContext"
+                },
+                {
+                    "title": "MetaBreakpointManager",
+                    "path": "classes/MetaBreakpointManager"
+                },
+                {
+                    "title": "Model",
+                    "path": "classes/Model"
+                },
+                {
+                    "title": "ModuleScript",
+                    "path": "classes/ModuleScript"
+                },
+                {
+                    "title": "Motor",
+                    "path": "classes/Motor"
+                },
+                {
+                    "title": "Motor6D",
+                    "path": "classes/Motor6D"
+                },
+                {
+                    "title": "MotorFeature",
+                    "path": "classes/MotorFeature"
+                },
+                {
+                    "title": "Mouse",
+                    "path": "classes/Mouse"
+                },
+                {
+                    "title": "MouseService",
+                    "path": "classes/MouseService"
+                },
+                {
+                    "title": "MultipleDocumentInterfaceInstance",
+                    "path": "classes/MultipleDocumentInterfaceInstance"
+                },
+                {
+                    "title": "NegateOperation",
+                    "path": "classes/NegateOperation"
+                },
+                {
+                    "title": "NetworkClient",
+                    "path": "classes/NetworkClient"
+                },
+                {
+                    "title": "NetworkMarker",
+                    "path": "classes/NetworkMarker"
+                },
+                {
+                    "title": "NetworkPeer",
+                    "path": "classes/NetworkPeer"
+                },
+                {
+                    "title": "NetworkReplicator",
+                    "path": "classes/NetworkReplicator"
+                },
+                {
+                    "title": "NetworkServer",
+                    "path": "classes/NetworkServer"
+                },
+                {
+                    "title": "NetworkSettings",
+                    "path": "classes/NetworkSettings"
+                },
+                {
+                    "title": "NoCollisionConstraint",
+                    "path": "classes/NoCollisionConstraint"
+                },
+                {
+                    "title": "NonReplicatedCSGDictionaryService",
+                    "path": "classes/NonReplicatedCSGDictionaryService"
+                },
+                {
+                    "title": "NotificationService",
+                    "path": "classes/NotificationService"
+                },
+                {
+                    "title": "NumberPose",
+                    "path": "classes/NumberPose"
+                },
+                {
+                    "title": "NumberValue",
+                    "path": "classes/NumberValue"
+                },
+                {
+                    "title": "ObjectValue",
+                    "path": "classes/ObjectValue"
+                },
+                {
+                    "title": "OrderedDataStore",
+                    "path": "classes/OrderedDataStore"
+                },
+                {
+                    "title": "OutfitPages",
+                    "path": "classes/OutfitPages"
+                },
+                {
+                    "title": "PVAdornment",
+                    "path": "classes/PVAdornment"
+                },
+                {
+                    "title": "PVInstance",
+                    "path": "classes/PVInstance"
+                },
+                {
+                    "title": "PackageLink",
+                    "path": "classes/PackageLink"
+                },
+                {
+                    "title": "PackageService",
+                    "path": "classes/PackageService"
+                },
+                {
+                    "title": "PackageUIService",
+                    "path": "classes/PackageUIService"
+                },
+                {
+                    "title": "Pages",
+                    "path": "classes/Pages"
+                },
+                {
+                    "title": "Pants",
+                    "path": "classes/Pants"
+                },
+                {
+                    "title": "ParabolaAdornment",
+                    "path": "classes/ParabolaAdornment"
+                },
+                {
+                    "title": "Part",
+                    "path": "classes/Part"
+                },
+                {
+                    "title": "PartAdornment",
+                    "path": "classes/PartAdornment"
+                },
+                {
+                    "title": "PartOperation",
+                    "path": "classes/PartOperation"
+                },
+                {
+                    "title": "PartOperationAsset",
+                    "path": "classes/PartOperationAsset"
+                },
+                {
+                    "title": "ParticleEmitter",
+                    "path": "classes/ParticleEmitter"
+                },
+                {
+                    "title": "PatchMapping",
+                    "path": "classes/PatchMapping"
+                },
+                {
+                    "title": "Path",
+                    "path": "classes/Path"
+                },
+                {
+                    "title": "PathfindingLink",
+                    "path": "classes/PathfindingLink"
+                },
+                {
+                    "title": "PathfindingModifier",
+                    "path": "classes/PathfindingModifier"
+                },
+                {
+                    "title": "PathfindingService",
+                    "path": "classes/PathfindingService"
+                },
+                {
+                    "title": "PausedState",
+                    "path": "classes/PausedState"
+                },
+                {
+                    "title": "PausedStateBreakpoint",
+                    "path": "classes/PausedStateBreakpoint"
+                },
+                {
+                    "title": "PausedStateException",
+                    "path": "classes/PausedStateException"
+                },
+                {
+                    "title": "PermissionsService",
+                    "path": "classes/PermissionsService"
+                },
+                {
+                    "title": "PhysicsService",
+                    "path": "classes/PhysicsService"
+                },
+                {
+                    "title": "PhysicsSettings",
+                    "path": "classes/PhysicsSettings"
+                },
+                {
+                    "title": "PitchShiftSoundEffect",
+                    "path": "classes/PitchShiftSoundEffect"
+                },
+                {
+                    "title": "Plane",
+                    "path": "classes/Plane"
+                },
+                {
+                    "title": "PlaneConstraint",
+                    "path": "classes/PlaneConstraint"
+                },
+                {
+                    "title": "Platform",
+                    "path": "classes/Platform"
+                },
+                {
+                    "title": "Player",
+                    "path": "classes/Player"
+                },
+                {
+                    "title": "PlayerEmulatorService",
+                    "path": "classes/PlayerEmulatorService"
+                },
+                {
+                    "title": "PlayerGui",
+                    "path": "classes/PlayerGui"
+                },
+                {
+                    "title": "PlayerMouse",
+                    "path": "classes/PlayerMouse"
+                },
+                {
+                    "title": "PlayerScripts",
+                    "path": "classes/PlayerScripts"
+                },
+                {
+                    "title": "Players",
+                    "path": "classes/Players"
+                },
+                {
+                    "title": "Plugin",
+                    "path": "classes/Plugin"
+                },
+                {
+                    "title": "PluginAction",
+                    "path": "classes/PluginAction"
+                },
+                {
+                    "title": "PluginDebugService",
+                    "path": "classes/PluginDebugService"
+                },
+                {
+                    "title": "PluginDragEvent",
+                    "path": "classes/PluginDragEvent"
+                },
+                {
+                    "title": "PluginGui",
+                    "path": "classes/PluginGui"
+                },
+                {
+                    "title": "PluginGuiService",
+                    "path": "classes/PluginGuiService"
+                },
+                {
+                    "title": "PluginManagementService",
+                    "path": "classes/PluginManagementService"
+                },
+                {
+                    "title": "PluginManager",
+                    "path": "classes/PluginManager"
+                },
+                {
+                    "title": "PluginManagerInterface",
+                    "path": "classes/PluginManagerInterface"
+                },
+                {
+                    "title": "PluginMenu",
+                    "path": "classes/PluginMenu"
+                },
+                {
+                    "title": "PluginMouse",
+                    "path": "classes/PluginMouse"
+                },
+                {
+                    "title": "PluginPolicyService",
+                    "path": "classes/PluginPolicyService"
+                },
+                {
+                    "title": "PluginToolbar",
+                    "path": "classes/PluginToolbar"
+                },
+                {
+                    "title": "PluginToolbarButton",
+                    "path": "classes/PluginToolbarButton"
+                },
+                {
+                    "title": "PointLight",
+                    "path": "classes/PointLight"
+                },
+                {
+                    "title": "PointsService",
+                    "path": "classes/PointsService"
+                },
+                {
+                    "title": "PolicyService",
+                    "path": "classes/PolicyService"
+                },
+                {
+                    "title": "Pose",
+                    "path": "classes/Pose"
+                },
+                {
+                    "title": "PoseBase",
+                    "path": "classes/PoseBase"
+                },
+                {
+                    "title": "PostEffect",
+                    "path": "classes/PostEffect"
+                },
+                {
+                    "title": "PrismaticConstraint",
+                    "path": "classes/PrismaticConstraint"
+                },
+                {
+                    "title": "ProcessInstancePhysicsService",
+                    "path": "classes/ProcessInstancePhysicsService"
+                },
+                {
+                    "title": "ProximityPrompt",
+                    "path": "classes/ProximityPrompt"
+                },
+                {
+                    "title": "ProximityPromptService",
+                    "path": "classes/ProximityPromptService"
+                },
+                {
+                    "title": "PublishService",
+                    "path": "classes/PublishService"
+                },
+                {
+                    "title": "QWidgetPluginGui",
+                    "path": "classes/QWidgetPluginGui"
+                },
+                {
+                    "title": "RayValue",
+                    "path": "classes/RayValue"
+                },
+                {
+                    "title": "RbxAnalyticsService",
+                    "path": "classes/RbxAnalyticsService"
+                },
+                {
+                    "title": "ReflectionMetadata",
+                    "path": "classes/ReflectionMetadata"
+                },
+                {
+                    "title": "ReflectionMetadataCallbacks",
+                    "path": "classes/ReflectionMetadataCallbacks"
+                },
+                {
+                    "title": "ReflectionMetadataClass",
+                    "path": "classes/ReflectionMetadataClass"
+                },
+                {
+                    "title": "ReflectionMetadataClasses",
+                    "path": "classes/ReflectionMetadataClasses"
+                },
+                {
+                    "title": "ReflectionMetadataEnum",
+                    "path": "classes/ReflectionMetadataEnum"
+                },
+                {
+                    "title": "ReflectionMetadataEnumItem",
+                    "path": "classes/ReflectionMetadataEnumItem"
+                },
+                {
+                    "title": "ReflectionMetadataEnums",
+                    "path": "classes/ReflectionMetadataEnums"
+                },
+                {
+                    "title": "ReflectionMetadataEvents",
+                    "path": "classes/ReflectionMetadataEvents"
+                },
+                {
+                    "title": "ReflectionMetadataFunctions",
+                    "path": "classes/ReflectionMetadataFunctions"
+                },
+                {
+                    "title": "ReflectionMetadataItem",
+                    "path": "classes/ReflectionMetadataItem"
+                },
+                {
+                    "title": "ReflectionMetadataMember",
+                    "path": "classes/ReflectionMetadataMember"
+                },
+                {
+                    "title": "ReflectionMetadataProperties",
+                    "path": "classes/ReflectionMetadataProperties"
+                },
+                {
+                    "title": "ReflectionMetadataYieldFunctions",
+                    "path": "classes/ReflectionMetadataYieldFunctions"
+                },
+                {
+                    "title": "RemoteDebuggerServer",
+                    "path": "classes/RemoteDebuggerServer"
+                },
+                {
+                    "title": "RemoteEvent",
+                    "path": "classes/RemoteEvent"
+                },
+                {
+                    "title": "RemoteFunction",
+                    "path": "classes/RemoteFunction"
+                },
+                {
+                    "title": "RenderSettings",
+                    "path": "classes/RenderSettings"
+                },
+                {
+                    "title": "RenderingTest",
+                    "path": "classes/RenderingTest"
+                },
+                {
+                    "title": "ReplicatedFirst",
+                    "path": "classes/ReplicatedFirst"
+                },
+                {
+                    "title": "ReplicatedStorage",
+                    "path": "classes/ReplicatedStorage"
+                },
+                {
+                    "title": "ReverbSoundEffect",
+                    "path": "classes/ReverbSoundEffect"
+                },
+                {
+                    "title": "RigidConstraint",
+                    "path": "classes/RigidConstraint"
+                },
+                {
+                    "title": "RobloxPluginGuiService",
+                    "path": "classes/RobloxPluginGuiService"
+                },
+                {
+                    "title": "RobloxReplicatedStorage",
+                    "path": "classes/RobloxReplicatedStorage"
+                },
+                {
+                    "title": "RocketPropulsion",
+                    "path": "classes/RocketPropulsion"
+                },
+                {
+                    "title": "RodConstraint",
+                    "path": "classes/RodConstraint"
+                },
+                {
+                    "title": "RopeConstraint",
+                    "path": "classes/RopeConstraint"
+                },
+                {
+                    "title": "Rotate",
+                    "path": "classes/Rotate"
+                },
+                {
+                    "title": "RotateP",
+                    "path": "classes/RotateP"
+                },
+                {
+                    "title": "RotateV",
+                    "path": "classes/RotateV"
+                },
+                {
+                    "title": "RotationCurve",
+                    "path": "classes/RotationCurve"
+                },
+                {
+                    "title": "RtMessagingService",
+                    "path": "classes/RtMessagingService"
+                },
+                {
+                    "title": "RunService",
+                    "path": "classes/RunService"
+                },
+                {
+                    "title": "RunningAverageItemDouble",
+                    "path": "classes/RunningAverageItemDouble"
+                },
+                {
+                    "title": "RunningAverageItemInt",
+                    "path": "classes/RunningAverageItemInt"
+                },
+                {
+                    "title": "RunningAverageTimeIntervalItem",
+                    "path": "classes/RunningAverageTimeIntervalItem"
+                },
+                {
+                    "title": "RuntimeScriptService",
+                    "path": "classes/RuntimeScriptService"
+                },
+                {
+                    "title": "ScreenGui",
+                    "path": "classes/ScreenGui"
+                },
+                {
+                    "title": "ScreenshotHud",
+                    "path": "classes/ScreenshotHud"
+                },
+                {
+                    "title": "Script",
+                    "path": "classes/Script"
+                },
+                {
+                    "title": "ScriptChangeService",
+                    "path": "classes/ScriptChangeService"
+                },
+                {
+                    "title": "ScriptCloneWatcher",
+                    "path": "classes/ScriptCloneWatcher"
+                },
+                {
+                    "title": "ScriptCloneWatcherHelper",
+                    "path": "classes/ScriptCloneWatcherHelper"
+                },
+                {
+                    "title": "ScriptContext",
+                    "path": "classes/ScriptContext"
+                },
+                {
+                    "title": "ScriptDebugger",
+                    "path": "classes/ScriptDebugger"
+                },
+                {
+                    "title": "ScriptDocument",
+                    "path": "classes/ScriptDocument"
+                },
+                {
+                    "title": "ScriptEditorService",
+                    "path": "classes/ScriptEditorService"
+                },
+                {
+                    "title": "ScriptRegistrationService",
+                    "path": "classes/ScriptRegistrationService"
+                },
+                {
+                    "title": "ScriptService",
+                    "path": "classes/ScriptService"
+                },
+                {
+                    "title": "ScrollingFrame",
+                    "path": "classes/ScrollingFrame"
+                },
+                {
+                    "title": "Seat",
+                    "path": "classes/Seat"
+                },
+                {
+                    "title": "Selection",
+                    "path": "classes/Selection"
+                },
+                {
+                    "title": "SelectionBox",
+                    "path": "classes/SelectionBox"
+                },
+                {
+                    "title": "SelectionLasso",
+                    "path": "classes/SelectionLasso"
+                },
+                {
+                    "title": "SelectionPartLasso",
+                    "path": "classes/SelectionPartLasso"
+                },
+                {
+                    "title": "SelectionPointLasso",
+                    "path": "classes/SelectionPointLasso"
+                },
+                {
+                    "title": "SelectionSphere",
+                    "path": "classes/SelectionSphere"
+                },
+                {
+                    "title": "ServerReplicator",
+                    "path": "classes/ServerReplicator"
+                },
+                {
+                    "title": "ServerScriptService",
+                    "path": "classes/ServerScriptService"
+                },
+                {
+                    "title": "ServerStorage",
+                    "path": "classes/ServerStorage"
+                },
+                {
+                    "title": "ServiceProvider",
+                    "path": "classes/ServiceProvider"
+                },
+                {
+                    "title": "SessionService",
+                    "path": "classes/SessionService"
+                },
+                {
+                    "title": "Shirt",
+                    "path": "classes/Shirt"
+                },
+                {
+                    "title": "ShirtGraphic",
+                    "path": "classes/ShirtGraphic"
+                },
+                {
+                    "title": "SkateboardController",
+                    "path": "classes/SkateboardController"
+                },
+                {
+                    "title": "SkateboardPlatform",
+                    "path": "classes/SkateboardPlatform"
+                },
+                {
+                    "title": "Skin",
+                    "path": "classes/Skin"
+                },
+                {
+                    "title": "Sky",
+                    "path": "classes/Sky"
+                },
+                {
+                    "title": "SlidingBallConstraint",
+                    "path": "classes/SlidingBallConstraint"
+                },
+                {
+                    "title": "Smoke",
+                    "path": "classes/Smoke"
+                },
+                {
+                    "title": "Snap",
+                    "path": "classes/Snap"
+                },
+                {
+                    "title": "SnippetService",
+                    "path": "classes/SnippetService"
+                },
+                {
+                    "title": "SocialService",
+                    "path": "classes/SocialService"
+                },
+                {
+                    "title": "SolidModelContentProvider",
+                    "path": "classes/SolidModelContentProvider"
+                },
+                {
+                    "title": "Sound",
+                    "path": "classes/Sound"
+                },
+                {
+                    "title": "SoundEffect",
+                    "path": "classes/SoundEffect"
+                },
+                {
+                    "title": "SoundGroup",
+                    "path": "classes/SoundGroup"
+                },
+                {
+                    "title": "SoundService",
+                    "path": "classes/SoundService"
+                },
+                {
+                    "title": "Sparkles",
+                    "path": "classes/Sparkles"
+                },
+                {
+                    "title": "SpawnLocation",
+                    "path": "classes/SpawnLocation"
+                },
+                {
+                    "title": "SpawnerService",
+                    "path": "classes/SpawnerService"
+                },
+                {
+                    "title": "Speaker",
+                    "path": "classes/Speaker"
+                },
+                {
+                    "title": "SpecialMesh",
+                    "path": "classes/SpecialMesh"
+                },
+                {
+                    "title": "SphereHandleAdornment",
+                    "path": "classes/SphereHandleAdornment"
+                },
+                {
+                    "title": "SpotLight",
+                    "path": "classes/SpotLight"
+                },
+                {
+                    "title": "SpringConstraint",
+                    "path": "classes/SpringConstraint"
+                },
+                {
+                    "title": "StackFrame",
+                    "path": "classes/StackFrame"
+                },
+                {
+                    "title": "StandalonePluginScripts",
+                    "path": "classes/StandalonePluginScripts"
+                },
+                {
+                    "title": "StandardPages",
+                    "path": "classes/StandardPages"
+                },
+                {
+                    "title": "StarterCharacterScripts",
+                    "path": "classes/StarterCharacterScripts"
+                },
+                {
+                    "title": "StarterGear",
+                    "path": "classes/StarterGear"
+                },
+                {
+                    "title": "StarterGui",
+                    "path": "classes/StarterGui"
+                },
+                {
+                    "title": "StarterPack",
+                    "path": "classes/StarterPack"
+                },
+                {
+                    "title": "StarterPlayer",
+                    "path": "classes/StarterPlayer"
+                },
+                {
+                    "title": "StarterPlayerScripts",
+                    "path": "classes/StarterPlayerScripts"
+                },
+                {
+                    "title": "Stats",
+                    "path": "classes/Stats"
+                },
+                {
+                    "title": "StatsItem",
+                    "path": "classes/StatsItem"
+                },
+                {
+                    "title": "Status",
+                    "path": "classes/Status"
+                },
+                {
+                    "title": "StopWatchReporter",
+                    "path": "classes/StopWatchReporter"
+                },
+                {
+                    "title": "StringValue",
+                    "path": "classes/StringValue"
+                },
+                {
+                    "title": "Studio",
+                    "path": "classes/Studio"
+                },
+                {
+                    "title": "StudioAssetService",
+                    "path": "classes/StudioAssetService"
+                },
+                {
+                    "title": "StudioData",
+                    "path": "classes/StudioData"
+                },
+                {
+                    "title": "StudioDeviceEmulatorService",
+                    "path": "classes/StudioDeviceEmulatorService"
+                },
+                {
+                    "title": "StudioHighDpiService",
+                    "path": "classes/StudioHighDpiService"
+                },
+                {
+                    "title": "StudioPublishService",
+                    "path": "classes/StudioPublishService"
+                },
+                {
+                    "title": "StudioScriptDebugEventListener",
+                    "path": "classes/StudioScriptDebugEventListener"
+                },
+                {
+                    "title": "StudioService",
+                    "path": "classes/StudioService"
+                },
+                {
+                    "title": "StudioTheme",
+                    "path": "classes/StudioTheme"
+                },
+                {
+                    "title": "SunRaysEffect",
+                    "path": "classes/SunRaysEffect"
+                },
+                {
+                    "title": "SurfaceAppearance",
+                    "path": "classes/SurfaceAppearance"
+                },
+                {
+                    "title": "SurfaceGui",
+                    "path": "classes/SurfaceGui"
+                },
+                {
+                    "title": "SurfaceGuiBase",
+                    "path": "classes/SurfaceGuiBase"
+                },
+                {
+                    "title": "SurfaceLight",
+                    "path": "classes/SurfaceLight"
+                },
+                {
+                    "title": "SurfaceSelection",
+                    "path": "classes/SurfaceSelection"
+                },
+                {
+                    "title": "SwimController",
+                    "path": "classes/SwimController"
+                },
+                {
+                    "title": "TaskScheduler",
+                    "path": "classes/TaskScheduler"
+                },
+                {
+                    "title": "Team",
+                    "path": "classes/Team"
+                },
+                {
+                    "title": "TeamCreateService",
+                    "path": "classes/TeamCreateService"
+                },
+                {
+                    "title": "Teams",
+                    "path": "classes/Teams"
+                },
+                {
+                    "title": "TeleportAsyncResult",
+                    "path": "classes/TeleportAsyncResult"
+                },
+                {
+                    "title": "TeleportOptions",
+                    "path": "classes/TeleportOptions"
+                },
+                {
+                    "title": "TeleportService",
+                    "path": "classes/TeleportService"
+                },
+                {
+                    "title": "TemporaryCageMeshProvider",
+                    "path": "classes/TemporaryCageMeshProvider"
+                },
+                {
+                    "title": "TemporaryScriptService",
+                    "path": "classes/TemporaryScriptService"
+                },
+                {
+                    "title": "Terrain",
+                    "path": "classes/Terrain"
+                },
+                {
+                    "title": "TerrainDetail",
+                    "path": "classes/TerrainDetail"
+                },
+                {
+                    "title": "TerrainRegion",
+                    "path": "classes/TerrainRegion"
+                },
+                {
+                    "title": "TestService",
+                    "path": "classes/TestService"
+                },
+                {
+                    "title": "TextBox",
+                    "path": "classes/TextBox"
+                },
+                {
+                    "title": "TextBoxService",
+                    "path": "classes/TextBoxService"
+                },
+                {
+                    "title": "TextButton",
+                    "path": "classes/TextButton"
+                },
+                {
+                    "title": "TextChannel",
+                    "path": "classes/TextChannel"
+                },
+                {
+                    "title": "TextChatCommand",
+                    "path": "classes/TextChatCommand"
+                },
+                {
+                    "title": "TextChatConfigurations",
+                    "path": "classes/TextChatConfigurations"
+                },
+                {
+                    "title": "TextChatMessage",
+                    "path": "classes/TextChatMessage"
+                },
+                {
+                    "title": "TextChatMessageProperties",
+                    "path": "classes/TextChatMessageProperties"
+                },
+                {
+                    "title": "TextChatService",
+                    "path": "classes/TextChatService"
+                },
+                {
+                    "title": "TextFilterResult",
+                    "path": "classes/TextFilterResult"
+                },
+                {
+                    "title": "TextLabel",
+                    "path": "classes/TextLabel"
+                },
+                {
+                    "title": "TextService",
+                    "path": "classes/TextService"
+                },
+                {
+                    "title": "TextSource",
+                    "path": "classes/TextSource"
+                },
+                {
+                    "title": "Texture",
+                    "path": "classes/Texture"
+                },
+                {
+                    "title": "ThirdPartyUserService",
+                    "path": "classes/ThirdPartyUserService"
+                },
+                {
+                    "title": "ThreadState",
+                    "path": "classes/ThreadState"
+                },
+                {
+                    "title": "TimerService",
+                    "path": "classes/TimerService"
+                },
+                {
+                    "title": "ToastNotificationService",
+                    "path": "classes/ToastNotificationService"
+                },
+                {
+                    "title": "Tool",
+                    "path": "classes/Tool"
+                },
+                {
+                    "title": "Torque",
+                    "path": "classes/Torque"
+                },
+                {
+                    "title": "TorsionSpringConstraint",
+                    "path": "classes/TorsionSpringConstraint"
+                },
+                {
+                    "title": "TotalCountTimeIntervalItem",
+                    "path": "classes/TotalCountTimeIntervalItem"
+                },
+                {
+                    "title": "TouchInputService",
+                    "path": "classes/TouchInputService"
+                },
+                {
+                    "title": "TouchTransmitter",
+                    "path": "classes/TouchTransmitter"
+                },
+                {
+                    "title": "TracerService",
+                    "path": "classes/TracerService"
+                },
+                {
+                    "title": "TrackerStreamAnimation",
+                    "path": "classes/TrackerStreamAnimation"
+                },
+                {
+                    "title": "Trail",
+                    "path": "classes/Trail"
+                },
+                {
+                    "title": "Translator",
+                    "path": "classes/Translator"
+                },
+                {
+                    "title": "TremoloSoundEffect",
+                    "path": "classes/TremoloSoundEffect"
+                },
+                {
+                    "title": "TriangleMeshPart",
+                    "path": "classes/TriangleMeshPart"
+                },
+                {
+                    "title": "TrussPart",
+                    "path": "classes/TrussPart"
+                },
+                {
+                    "title": "Tween",
+                    "path": "classes/Tween"
+                },
+                {
+                    "title": "TweenBase",
+                    "path": "classes/TweenBase"
+                },
+                {
+                    "title": "TweenService",
+                    "path": "classes/TweenService"
+                },
+                {
+                    "title": "UGCValidationService",
+                    "path": "classes/UGCValidationService"
+                },
+                {
+                    "title": "UIAspectRatioConstraint",
+                    "path": "classes/UIAspectRatioConstraint"
+                },
+                {
+                    "title": "UIBase",
+                    "path": "classes/UIBase"
+                },
+                {
+                    "title": "UIComponent",
+                    "path": "classes/UIComponent"
+                },
+                {
+                    "title": "UIConstraint",
+                    "path": "classes/UIConstraint"
+                },
+                {
+                    "title": "UICorner",
+                    "path": "classes/UICorner"
+                },
+                {
+                    "title": "UIGradient",
+                    "path": "classes/UIGradient"
+                },
+                {
+                    "title": "UIGridLayout",
+                    "path": "classes/UIGridLayout"
+                },
+                {
+                    "title": "UIGridStyleLayout",
+                    "path": "classes/UIGridStyleLayout"
+                },
+                {
+                    "title": "UILayout",
+                    "path": "classes/UILayout"
+                },
+                {
+                    "title": "UIListLayout",
+                    "path": "classes/UIListLayout"
+                },
+                {
+                    "title": "UIPadding",
+                    "path": "classes/UIPadding"
+                },
+                {
+                    "title": "UIPageLayout",
+                    "path": "classes/UIPageLayout"
+                },
+                {
+                    "title": "UIScale",
+                    "path": "classes/UIScale"
+                },
+                {
+                    "title": "UISizeConstraint",
+                    "path": "classes/UISizeConstraint"
+                },
+                {
+                    "title": "UIStroke",
+                    "path": "classes/UIStroke"
+                },
+                {
+                    "title": "UITableLayout",
+                    "path": "classes/UITableLayout"
+                },
+                {
+                    "title": "UITextSizeConstraint",
+                    "path": "classes/UITextSizeConstraint"
+                },
+                {
+                    "title": "UnionOperation",
+                    "path": "classes/UnionOperation"
+                },
+                {
+                    "title": "UniversalConstraint",
+                    "path": "classes/UniversalConstraint"
+                },
+                {
+                    "title": "UnvalidatedAssetService",
+                    "path": "classes/UnvalidatedAssetService"
+                },
+                {
+                    "title": "UserGameSettings",
+                    "path": "classes/UserGameSettings"
+                },
+                {
+                    "title": "UserInputService",
+                    "path": "classes/UserInputService"
+                },
+                {
+                    "title": "UserService",
+                    "path": "classes/UserService"
+                },
+                {
+                    "title": "UserSettings",
+                    "path": "classes/UserSettings"
+                },
+                {
+                    "title": "UserStorageService",
+                    "path": "classes/UserStorageService"
+                },
+                {
+                    "title": "VRService",
+                    "path": "classes/VRService"
+                },
+                {
+                    "title": "ValueBase",
+                    "path": "classes/ValueBase"
+                },
+                {
+                    "title": "Vector3Curve",
+                    "path": "classes/Vector3Curve"
+                },
+                {
+                    "title": "Vector3Value",
+                    "path": "classes/Vector3Value"
+                },
+                {
+                    "title": "VectorForce",
+                    "path": "classes/VectorForce"
+                },
+                {
+                    "title": "VehicleController",
+                    "path": "classes/VehicleController"
+                },
+                {
+                    "title": "VehicleSeat",
+                    "path": "classes/VehicleSeat"
+                },
+                {
+                    "title": "VelocityMotor",
+                    "path": "classes/VelocityMotor"
+                },
+                {
+                    "title": "VersionControlService",
+                    "path": "classes/VersionControlService"
+                },
+                {
+                    "title": "VideoCaptureService",
+                    "path": "classes/VideoCaptureService"
+                },
+                {
+                    "title": "VideoFrame",
+                    "path": "classes/VideoFrame"
+                },
+                {
+                    "title": "ViewportFrame",
+                    "path": "classes/ViewportFrame"
+                },
+                {
+                    "title": "VirtualInputManager",
+                    "path": "classes/VirtualInputManager"
+                },
+                {
+                    "title": "VirtualUser",
+                    "path": "classes/VirtualUser"
+                },
+                {
+                    "title": "VisibilityService",
+                    "path": "classes/VisibilityService"
+                },
+                {
+                    "title": "Visit",
+                    "path": "classes/Visit"
+                },
+                {
+                    "title": "VoiceChannel",
+                    "path": "classes/VoiceChannel"
+                },
+                {
+                    "title": "VoiceChatInternal",
+                    "path": "classes/VoiceChatInternal"
+                },
+                {
+                    "title": "VoiceChatService",
+                    "path": "classes/VoiceChatService"
+                },
+                {
+                    "title": "VoiceSource",
+                    "path": "classes/VoiceSource"
+                },
+                {
+                    "title": "WedgePart",
+                    "path": "classes/WedgePart"
+                },
+                {
+                    "title": "Weld",
+                    "path": "classes/Weld"
+                },
+                {
+                    "title": "WeldConstraint",
+                    "path": "classes/WeldConstraint"
+                },
+                {
+                    "title": "WireframeHandleAdornment",
+                    "path": "classes/WireframeHandleAdornment"
+                },
+                {
+                    "title": "Workspace",
+                    "path": "classes/Workspace"
+                },
+                {
+                    "title": "WorldModel",
+                    "path": "classes/WorldModel"
+                },
+                {
+                    "title": "WorldRoot",
+                    "path": "classes/WorldRoot"
+                },
+                {
+                    "title": "WrapLayer",
+                    "path": "classes/WrapLayer"
+                },
+                {
+                    "title": "WrapTarget",
+                    "path": "classes/WrapTarget"
+                }
+            ]
+        },
+        {
+            "heading": "DATATYPE",
+            "navigation": [
+                {
+                    "title": "Axes",
+                    "path": "datatypes/Axes"
+                },
+                {
+                    "title": "BrickColor",
+                    "path": "datatypes/BrickColor"
+                },
+                {
+                    "title": "CFrame",
+                    "path": "datatypes/CFrame"
+                },
+                {
+                    "title": "CatalogSearchParams",
+                    "path": "datatypes/CatalogSearchParams"
+                },
+                {
+                    "title": "Color3",
+                    "path": "datatypes/Color3"
+                },
+                {
+                    "title": "ColorSequence",
+                    "path": "datatypes/ColorSequence"
+                },
+                {
+                    "title": "ColorSequenceKeypoint",
+                    "path": "datatypes/ColorSequenceKeypoint"
+                },
+                {
+                    "title": "DateTime",
+                    "path": "datatypes/DateTime"
+                },
+                {
+                    "title": "DockWidgetPluginGuiInfo",
+                    "path": "datatypes/DockWidgetPluginGuiInfo"
+                },
+                {
+                    "title": "Enum",
+                    "path": "datatypes/Enum"
+                },
+                {
+                    "title": "EnumItem",
+                    "path": "datatypes/EnumItem"
+                },
+                {
+                    "title": "Enums",
+                    "path": "datatypes/Enums"
+                },
+                {
+                    "title": "Faces",
+                    "path": "datatypes/Faces"
+                },
+                {
+                    "title": "FloatCurveKey",
+                    "path": "datatypes/FloatCurveKey"
+                },
+                {
+                    "title": "Font",
+                    "path": "datatypes/Font"
+                },
+                {
+                    "title": "Instance",
+                    "path": "datatypes/Instance"
+                },
+                {
+                    "title": "NumberRange",
+                    "path": "datatypes/NumberRange"
+                },
+                {
+                    "title": "NumberSequence",
+                    "path": "datatypes/NumberSequence"
+                },
+                {
+                    "title": "NumberSequenceKeypoint",
+                    "path": "datatypes/NumberSequenceKeypoint"
+                },
+                {
+                    "title": "OverlapParams",
+                    "path": "datatypes/OverlapParams"
+                },
+                {
+                    "title": "PathWaypoint",
+                    "path": "datatypes/PathWaypoint"
+                },
+                {
+                    "title": "PhysicalProperties",
+                    "path": "datatypes/PhysicalProperties"
+                },
+                {
+                    "title": "RBXScriptConnection",
+                    "path": "datatypes/RBXScriptConnection"
+                },
+                {
+                    "title": "RBXScriptSignal",
+                    "path": "datatypes/RBXScriptSignal"
+                },
+                {
+                    "title": "Random",
+                    "path": "datatypes/Random"
+                },
+                {
+                    "title": "Ray",
+                    "path": "datatypes/Ray"
+                },
+                {
+                    "title": "RaycastParams",
+                    "path": "datatypes/RaycastParams"
+                },
+                {
+                    "title": "RaycastResult",
+                    "path": "datatypes/RaycastResult"
+                },
+                {
+                    "title": "Rect",
+                    "path": "datatypes/Rect"
+                },
+                {
+                    "title": "Region3",
+                    "path": "datatypes/Region3"
+                },
+                {
+                    "title": "Region3int16",
+                    "path": "datatypes/Region3int16"
+                },
+                {
+                    "title": "TweenInfo",
+                    "path": "datatypes/TweenInfo"
+                },
+                {
+                    "title": "UDim",
+                    "path": "datatypes/UDim"
+                },
+                {
+                    "title": "UDim2",
+                    "path": "datatypes/UDim2"
+                },
+                {
+                    "title": "Vector2",
+                    "path": "datatypes/Vector2"
+                },
+                {
+                    "title": "Vector2int16",
+                    "path": "datatypes/Vector2int16"
+                },
+                {
+                    "title": "Vector3",
+                    "path": "datatypes/Vector3"
+                },
+                {
+                    "title": "Vector3int16",
+                    "path": "datatypes/Vector3int16"
+                }
+            ]
+        },
+        {
+            "heading": "ENUM",
+            "navigation": [
+                {
+                    "title": "AccessoryType",
+                    "path": "enums/AccessoryType"
+                },
+                {
+                    "title": "ActionType",
+                    "path": "enums/ActionType"
+                },
+                {
+                    "title": "ActuatorRelativeTo",
+                    "path": "enums/ActuatorRelativeTo"
+                },
+                {
+                    "title": "ActuatorType",
+                    "path": "enums/ActuatorType"
+                },
+                {
+                    "title": "AdShape",
+                    "path": "enums/AdShape"
+                },
+                {
+                    "title": "AdornCullingMode",
+                    "path": "enums/AdornCullingMode"
+                },
+                {
+                    "title": "AlignType",
+                    "path": "enums/AlignType"
+                },
+                {
+                    "title": "AlphaMode",
+                    "path": "enums/AlphaMode"
+                },
+                {
+                    "title": "AnalyticsEconomyAction",
+                    "path": "enums/AnalyticsEconomyAction"
+                },
+                {
+                    "title": "AnalyticsLogLevel",
+                    "path": "enums/AnalyticsLogLevel"
+                },
+                {
+                    "title": "AnalyticsProgressionStatus",
+                    "path": "enums/AnalyticsProgressionStatus"
+                },
+                {
+                    "title": "AnimationPriority",
+                    "path": "enums/AnimationPriority"
+                },
+                {
+                    "title": "AnimatorRetargetingMode",
+                    "path": "enums/AnimatorRetargetingMode"
+                },
+                {
+                    "title": "AppShellActionType",
+                    "path": "enums/AppShellActionType"
+                },
+                {
+                    "title": "AppShellFeature",
+                    "path": "enums/AppShellFeature"
+                },
+                {
+                    "title": "AppUpdateStatus",
+                    "path": "enums/AppUpdateStatus"
+                },
+                {
+                    "title": "ApplyStrokeMode",
+                    "path": "enums/ApplyStrokeMode"
+                },
+                {
+                    "title": "AspectType",
+                    "path": "enums/AspectType"
+                },
+                {
+                    "title": "AssetFetchStatus",
+                    "path": "enums/AssetFetchStatus"
+                },
+                {
+                    "title": "AssetType",
+                    "path": "enums/AssetType"
+                },
+                {
+                    "title": "AssetTypeVerification",
+                    "path": "enums/AssetTypeVerification"
+                },
+                {
+                    "title": "AutoIndentRule",
+                    "path": "enums/AutoIndentRule"
+                },
+                {
+                    "title": "AutomaticSize",
+                    "path": "enums/AutomaticSize"
+                },
+                {
+                    "title": "AvatarAssetType",
+                    "path": "enums/AvatarAssetType"
+                },
+                {
+                    "title": "AvatarContextMenuOption",
+                    "path": "enums/AvatarContextMenuOption"
+                },
+                {
+                    "title": "AvatarItemType",
+                    "path": "enums/AvatarItemType"
+                },
+                {
+                    "title": "AvatarPromptResult",
+                    "path": "enums/AvatarPromptResult"
+                },
+                {
+                    "title": "Axis",
+                    "path": "enums/Axis"
+                },
+                {
+                    "title": "BinType",
+                    "path": "enums/BinType"
+                },
+                {
+                    "title": "BodyPart",
+                    "path": "enums/BodyPart"
+                },
+                {
+                    "title": "BodyPartR15",
+                    "path": "enums/BodyPartR15"
+                },
+                {
+                    "title": "BorderMode",
+                    "path": "enums/BorderMode"
+                },
+                {
+                    "title": "BreakReason",
+                    "path": "enums/BreakReason"
+                },
+                {
+                    "title": "BreakpointRemoveReason",
+                    "path": "enums/BreakpointRemoveReason"
+                },
+                {
+                    "title": "BulkMoveMode",
+                    "path": "enums/BulkMoveMode"
+                },
+                {
+                    "title": "BundleType",
+                    "path": "enums/BundleType"
+                },
+                {
+                    "title": "Button",
+                    "path": "enums/Button"
+                },
+                {
+                    "title": "ButtonStyle",
+                    "path": "enums/ButtonStyle"
+                },
+                {
+                    "title": "CageType",
+                    "path": "enums/CageType"
+                },
+                {
+                    "title": "CameraMode",
+                    "path": "enums/CameraMode"
+                },
+                {
+                    "title": "CameraPanMode",
+                    "path": "enums/CameraPanMode"
+                },
+                {
+                    "title": "CameraType",
+                    "path": "enums/CameraType"
+                },
+                {
+                    "title": "CatalogCategoryFilter",
+                    "path": "enums/CatalogCategoryFilter"
+                },
+                {
+                    "title": "CatalogSortType",
+                    "path": "enums/CatalogSortType"
+                },
+                {
+                    "title": "CellBlock",
+                    "path": "enums/CellBlock"
+                },
+                {
+                    "title": "CellMaterial",
+                    "path": "enums/CellMaterial"
+                },
+                {
+                    "title": "CellOrientation",
+                    "path": "enums/CellOrientation"
+                },
+                {
+                    "title": "CenterDialogType",
+                    "path": "enums/CenterDialogType"
+                },
+                {
+                    "title": "ChatCallbackType",
+                    "path": "enums/ChatCallbackType"
+                },
+                {
+                    "title": "ChatColor",
+                    "path": "enums/ChatColor"
+                },
+                {
+                    "title": "ChatMode",
+                    "path": "enums/ChatMode"
+                },
+                {
+                    "title": "ChatPrivacyMode",
+                    "path": "enums/ChatPrivacyMode"
+                },
+                {
+                    "title": "ChatStyle",
+                    "path": "enums/ChatStyle"
+                },
+                {
+                    "title": "ChatVersion",
+                    "path": "enums/ChatVersion"
+                },
+                {
+                    "title": "ClientAnimatorThrottlingMode",
+                    "path": "enums/ClientAnimatorThrottlingMode"
+                },
+                {
+                    "title": "CollisionFidelity",
+                    "path": "enums/CollisionFidelity"
+                },
+                {
+                    "title": "CommandPermission",
+                    "path": "enums/CommandPermission"
+                },
+                {
+                    "title": "ComputerCameraMovementMode",
+                    "path": "enums/ComputerCameraMovementMode"
+                },
+                {
+                    "title": "ComputerMovementMode",
+                    "path": "enums/ComputerMovementMode"
+                },
+                {
+                    "title": "ConnectionError",
+                    "path": "enums/ConnectionError"
+                },
+                {
+                    "title": "ConnectionState",
+                    "path": "enums/ConnectionState"
+                },
+                {
+                    "title": "ContextActionPriority",
+                    "path": "enums/ContextActionPriority"
+                },
+                {
+                    "title": "ContextActionResult",
+                    "path": "enums/ContextActionResult"
+                },
+                {
+                    "title": "ControlMode",
+                    "path": "enums/ControlMode"
+                },
+                {
+                    "title": "CoreGuiType",
+                    "path": "enums/CoreGuiType"
+                },
+                {
+                    "title": "CreateOutfitFailure",
+                    "path": "enums/CreateOutfitFailure"
+                },
+                {
+                    "title": "CreatorType",
+                    "path": "enums/CreatorType"
+                },
+                {
+                    "title": "CurrencyType",
+                    "path": "enums/CurrencyType"
+                },
+                {
+                    "title": "CustomCameraMode",
+                    "path": "enums/CustomCameraMode"
+                },
+                {
+                    "title": "DataStoreRequestType",
+                    "path": "enums/DataStoreRequestType"
+                },
+                {
+                    "title": "DebuggerEndReason",
+                    "path": "enums/DebuggerEndReason"
+                },
+                {
+                    "title": "DebuggerExceptionBreakMode",
+                    "path": "enums/DebuggerExceptionBreakMode"
+                },
+                {
+                    "title": "DebuggerFrameType",
+                    "path": "enums/DebuggerFrameType"
+                },
+                {
+                    "title": "DebuggerPauseReason",
+                    "path": "enums/DebuggerPauseReason"
+                },
+                {
+                    "title": "DebuggerStatus",
+                    "path": "enums/DebuggerStatus"
+                },
+                {
+                    "title": "DevCameraOcclusionMode",
+                    "path": "enums/DevCameraOcclusionMode"
+                },
+                {
+                    "title": "DevComputerCameraMovementMode",
+                    "path": "enums/DevComputerCameraMovementMode"
+                },
+                {
+                    "title": "DevComputerMovementMode",
+                    "path": "enums/DevComputerMovementMode"
+                },
+                {
+                    "title": "DevTouchCameraMovementMode",
+                    "path": "enums/DevTouchCameraMovementMode"
+                },
+                {
+                    "title": "DevTouchMovementMode",
+                    "path": "enums/DevTouchMovementMode"
+                },
+                {
+                    "title": "DeveloperMemoryTag",
+                    "path": "enums/DeveloperMemoryTag"
+                },
+                {
+                    "title": "DeviceType",
+                    "path": "enums/DeviceType"
+                },
+                {
+                    "title": "DialogBehaviorType",
+                    "path": "enums/DialogBehaviorType"
+                },
+                {
+                    "title": "DialogPurpose",
+                    "path": "enums/DialogPurpose"
+                },
+                {
+                    "title": "DialogTone",
+                    "path": "enums/DialogTone"
+                },
+                {
+                    "title": "DominantAxis",
+                    "path": "enums/DominantAxis"
+                },
+                {
+                    "title": "DraftStatusCode",
+                    "path": "enums/DraftStatusCode"
+                },
+                {
+                    "title": "DraggerCoordinateSpace",
+                    "path": "enums/DraggerCoordinateSpace"
+                },
+                {
+                    "title": "DraggerMovementMode",
+                    "path": "enums/DraggerMovementMode"
+                },
+                {
+                    "title": "EasingDirection",
+                    "path": "enums/EasingDirection"
+                },
+                {
+                    "title": "EasingStyle",
+                    "path": "enums/EasingStyle"
+                },
+                {
+                    "title": "ElasticBehavior",
+                    "path": "enums/ElasticBehavior"
+                },
+                {
+                    "title": "EnviromentalPhysicsThrottle",
+                    "path": "enums/EnviromentalPhysicsThrottle"
+                },
+                {
+                    "title": "ExplosionType",
+                    "path": "enums/ExplosionType"
+                },
+                {
+                    "title": "FieldOfViewMode",
+                    "path": "enums/FieldOfViewMode"
+                },
+                {
+                    "title": "FillDirection",
+                    "path": "enums/FillDirection"
+                },
+                {
+                    "title": "FilterResult",
+                    "path": "enums/FilterResult"
+                },
+                {
+                    "title": "Font",
+                    "path": "enums/Font"
+                },
+                {
+                    "title": "FontSize",
+                    "path": "enums/FontSize"
+                },
+                {
+                    "title": "FontStyle",
+                    "path": "enums/FontStyle"
+                },
+                {
+                    "title": "FontWeight",
+                    "path": "enums/FontWeight"
+                },
+                {
+                    "title": "FormFactor",
+                    "path": "enums/FormFactor"
+                },
+                {
+                    "title": "FrameStyle",
+                    "path": "enums/FrameStyle"
+                },
+                {
+                    "title": "FramerateManagerMode",
+                    "path": "enums/FramerateManagerMode"
+                },
+                {
+                    "title": "FriendRequestEvent",
+                    "path": "enums/FriendRequestEvent"
+                },
+                {
+                    "title": "FriendStatus",
+                    "path": "enums/FriendStatus"
+                },
+                {
+                    "title": "FunctionalTestResult",
+                    "path": "enums/FunctionalTestResult"
+                },
+                {
+                    "title": "GameAvatarType",
+                    "path": "enums/GameAvatarType"
+                },
+                {
+                    "title": "GearGenreSetting",
+                    "path": "enums/GearGenreSetting"
+                },
+                {
+                    "title": "GearType",
+                    "path": "enums/GearType"
+                },
+                {
+                    "title": "Genre",
+                    "path": "enums/Genre"
+                },
+                {
+                    "title": "GraphicsMode",
+                    "path": "enums/GraphicsMode"
+                },
+                {
+                    "title": "GuiType",
+                    "path": "enums/GuiType"
+                },
+                {
+                    "title": "HandlesStyle",
+                    "path": "enums/HandlesStyle"
+                },
+                {
+                    "title": "HighlightDepthMode",
+                    "path": "enums/HighlightDepthMode"
+                },
+                {
+                    "title": "HorizontalAlignment",
+                    "path": "enums/HorizontalAlignment"
+                },
+                {
+                    "title": "HoverAnimateSpeed",
+                    "path": "enums/HoverAnimateSpeed"
+                },
+                {
+                    "title": "HttpCachePolicy",
+                    "path": "enums/HttpCachePolicy"
+                },
+                {
+                    "title": "HttpContentType",
+                    "path": "enums/HttpContentType"
+                },
+                {
+                    "title": "HttpError",
+                    "path": "enums/HttpError"
+                },
+                {
+                    "title": "HttpRequestType",
+                    "path": "enums/HttpRequestType"
+                },
+                {
+                    "title": "HumanoidCollisionType",
+                    "path": "enums/HumanoidCollisionType"
+                },
+                {
+                    "title": "HumanoidDisplayDistanceType",
+                    "path": "enums/HumanoidDisplayDistanceType"
+                },
+                {
+                    "title": "HumanoidHealthDisplayType",
+                    "path": "enums/HumanoidHealthDisplayType"
+                },
+                {
+                    "title": "HumanoidOnlySetCollisionsOnStateChange",
+                    "path": "enums/HumanoidOnlySetCollisionsOnStateChange"
+                },
+                {
+                    "title": "HumanoidRigType",
+                    "path": "enums/HumanoidRigType"
+                },
+                {
+                    "title": "HumanoidStateType",
+                    "path": "enums/HumanoidStateType"
+                },
+                {
+                    "title": "IKCollisionsMode",
+                    "path": "enums/IKCollisionsMode"
+                },
+                {
+                    "title": "IKControlType",
+                    "path": "enums/IKControlType"
+                },
+                {
+                    "title": "IXPLoadingStatus",
+                    "path": "enums/IXPLoadingStatus"
+                },
+                {
+                    "title": "InOut",
+                    "path": "enums/InOut"
+                },
+                {
+                    "title": "InfoType",
+                    "path": "enums/InfoType"
+                },
+                {
+                    "title": "InitialDockState",
+                    "path": "enums/InitialDockState"
+                },
+                {
+                    "title": "InputType",
+                    "path": "enums/InputType"
+                },
+                {
+                    "title": "InterpolationThrottlingMode",
+                    "path": "enums/InterpolationThrottlingMode"
+                },
+                {
+                    "title": "JointCreationMode",
+                    "path": "enums/JointCreationMode"
+                },
+                {
+                    "title": "KeyCode",
+                    "path": "enums/KeyCode"
+                },
+                {
+                    "title": "KeyInterpolationMode",
+                    "path": "enums/KeyInterpolationMode"
+                },
+                {
+                    "title": "KeywordFilterType",
+                    "path": "enums/KeywordFilterType"
+                },
+                {
+                    "title": "LSPMethodType",
+                    "path": "enums/LSPMethodType"
+                },
+                {
+                    "title": "Language",
+                    "path": "enums/Language"
+                },
+                {
+                    "title": "LeftRight",
+                    "path": "enums/LeftRight"
+                },
+                {
+                    "title": "LevelOfDetailSetting",
+                    "path": "enums/LevelOfDetailSetting"
+                },
+                {
+                    "title": "Limb",
+                    "path": "enums/Limb"
+                },
+                {
+                    "title": "LineJoinMode",
+                    "path": "enums/LineJoinMode"
+                },
+                {
+                    "title": "ListDisplayMode",
+                    "path": "enums/ListDisplayMode"
+                },
+                {
+                    "title": "ListenerType",
+                    "path": "enums/ListenerType"
+                },
+                {
+                    "title": "LoadCharacterLayeredClothing",
+                    "path": "enums/LoadCharacterLayeredClothing"
+                },
+                {
+                    "title": "LoadDynamicHeads",
+                    "path": "enums/LoadDynamicHeads"
+                },
+                {
+                    "title": "Material",
+                    "path": "enums/Material"
+                },
+                {
+                    "title": "MaterialPattern",
+                    "path": "enums/MaterialPattern"
+                },
+                {
+                    "title": "MembershipType",
+                    "path": "enums/MembershipType"
+                },
+                {
+                    "title": "MeshPartDetailLevel",
+                    "path": "enums/MeshPartDetailLevel"
+                },
+                {
+                    "title": "MeshPartHeadsAndAccessories",
+                    "path": "enums/MeshPartHeadsAndAccessories"
+                },
+                {
+                    "title": "MeshScaleUnit",
+                    "path": "enums/MeshScaleUnit"
+                },
+                {
+                    "title": "MeshType",
+                    "path": "enums/MeshType"
+                },
+                {
+                    "title": "MessageType",
+                    "path": "enums/MessageType"
+                },
+                {
+                    "title": "ModelLevelOfDetail",
+                    "path": "enums/ModelLevelOfDetail"
+                },
+                {
+                    "title": "ModifierKey",
+                    "path": "enums/ModifierKey"
+                },
+                {
+                    "title": "MouseBehavior",
+                    "path": "enums/MouseBehavior"
+                },
+                {
+                    "title": "MoveState",
+                    "path": "enums/MoveState"
+                },
+                {
+                    "title": "NameOcclusion",
+                    "path": "enums/NameOcclusion"
+                },
+                {
+                    "title": "NetworkOwnership",
+                    "path": "enums/NetworkOwnership"
+                },
+                {
+                    "title": "NewAnimationRuntimeSetting",
+                    "path": "enums/NewAnimationRuntimeSetting"
+                },
+                {
+                    "title": "NormalId",
+                    "path": "enums/NormalId"
+                },
+                {
+                    "title": "OrientationAlignmentMode",
+                    "path": "enums/OrientationAlignmentMode"
+                },
+                {
+                    "title": "OutfitSource",
+                    "path": "enums/OutfitSource"
+                },
+                {
+                    "title": "OutfitType",
+                    "path": "enums/OutfitType"
+                },
+                {
+                    "title": "OutputLayoutMode",
+                    "path": "enums/OutputLayoutMode"
+                },
+                {
+                    "title": "OverrideMouseIconBehavior",
+                    "path": "enums/OverrideMouseIconBehavior"
+                },
+                {
+                    "title": "PackagePermission",
+                    "path": "enums/PackagePermission"
+                },
+                {
+                    "title": "PartType",
+                    "path": "enums/PartType"
+                },
+                {
+                    "title": "ParticleEmitterShape",
+                    "path": "enums/ParticleEmitterShape"
+                },
+                {
+                    "title": "ParticleEmitterShapeInOut",
+                    "path": "enums/ParticleEmitterShapeInOut"
+                },
+                {
+                    "title": "ParticleEmitterShapeStyle",
+                    "path": "enums/ParticleEmitterShapeStyle"
+                },
+                {
+                    "title": "ParticleFlipbookLayout",
+                    "path": "enums/ParticleFlipbookLayout"
+                },
+                {
+                    "title": "ParticleFlipbookMode",
+                    "path": "enums/ParticleFlipbookMode"
+                },
+                {
+                    "title": "ParticleOrientation",
+                    "path": "enums/ParticleOrientation"
+                },
+                {
+                    "title": "PathStatus",
+                    "path": "enums/PathStatus"
+                },
+                {
+                    "title": "PathWaypointAction",
+                    "path": "enums/PathWaypointAction"
+                },
+                {
+                    "title": "PermissionLevelShown",
+                    "path": "enums/PermissionLevelShown"
+                },
+                {
+                    "title": "PhysicsSimulationRate",
+                    "path": "enums/PhysicsSimulationRate"
+                },
+                {
+                    "title": "PhysicsSteppingMethod",
+                    "path": "enums/PhysicsSteppingMethod"
+                },
+                {
+                    "title": "Platform",
+                    "path": "enums/Platform"
+                },
+                {
+                    "title": "PlaybackState",
+                    "path": "enums/PlaybackState"
+                },
+                {
+                    "title": "PlayerActions",
+                    "path": "enums/PlayerActions"
+                },
+                {
+                    "title": "PlayerChatType",
+                    "path": "enums/PlayerChatType"
+                },
+                {
+                    "title": "PoseEasingDirection",
+                    "path": "enums/PoseEasingDirection"
+                },
+                {
+                    "title": "PoseEasingStyle",
+                    "path": "enums/PoseEasingStyle"
+                },
+                {
+                    "title": "PositionAlignmentMode",
+                    "path": "enums/PositionAlignmentMode"
+                },
+                {
+                    "title": "PrivilegeType",
+                    "path": "enums/PrivilegeType"
+                },
+                {
+                    "title": "ProductLocationRestriction",
+                    "path": "enums/ProductLocationRestriction"
+                },
+                {
+                    "title": "ProductPurchaseDecision",
+                    "path": "enums/ProductPurchaseDecision"
+                },
+                {
+                    "title": "PropertyStatus",
+                    "path": "enums/PropertyStatus"
+                },
+                {
+                    "title": "ProximityPromptExclusivity",
+                    "path": "enums/ProximityPromptExclusivity"
+                },
+                {
+                    "title": "ProximityPromptInputType",
+                    "path": "enums/ProximityPromptInputType"
+                },
+                {
+                    "title": "ProximityPromptStyle",
+                    "path": "enums/ProximityPromptStyle"
+                },
+                {
+                    "title": "QualityLevel",
+                    "path": "enums/QualityLevel"
+                },
+                {
+                    "title": "R15CollisionType",
+                    "path": "enums/R15CollisionType"
+                },
+                {
+                    "title": "RaycastFilterType",
+                    "path": "enums/RaycastFilterType"
+                },
+                {
+                    "title": "RenderFidelity",
+                    "path": "enums/RenderFidelity"
+                },
+                {
+                    "title": "RenderPriority",
+                    "path": "enums/RenderPriority"
+                },
+                {
+                    "title": "RenderingTestComparisonMethod",
+                    "path": "enums/RenderingTestComparisonMethod"
+                },
+                {
+                    "title": "ReplicateInstanceDestroySetting",
+                    "path": "enums/ReplicateInstanceDestroySetting"
+                },
+                {
+                    "title": "ResamplerMode",
+                    "path": "enums/ResamplerMode"
+                },
+                {
+                    "title": "ReturnKeyType",
+                    "path": "enums/ReturnKeyType"
+                },
+                {
+                    "title": "ReverbType",
+                    "path": "enums/ReverbType"
+                },
+                {
+                    "title": "RibbonTool",
+                    "path": "enums/RibbonTool"
+                },
+                {
+                    "title": "RigType",
+                    "path": "enums/RigType"
+                },
+                {
+                    "title": "RollOffMode",
+                    "path": "enums/RollOffMode"
+                },
+                {
+                    "title": "RotationOrder",
+                    "path": "enums/RotationOrder"
+                },
+                {
+                    "title": "RotationType",
+                    "path": "enums/RotationType"
+                },
+                {
+                    "title": "RunContext",
+                    "path": "enums/RunContext"
+                },
+                {
+                    "title": "RuntimeUndoBehavior",
+                    "path": "enums/RuntimeUndoBehavior"
+                },
+                {
+                    "title": "SaveFilter",
+                    "path": "enums/SaveFilter"
+                },
+                {
+                    "title": "SavedQualitySetting",
+                    "path": "enums/SavedQualitySetting"
+                },
+                {
+                    "title": "ScaleType",
+                    "path": "enums/ScaleType"
+                },
+                {
+                    "title": "ScreenOrientation",
+                    "path": "enums/ScreenOrientation"
+                },
+                {
+                    "title": "ScrollBarInset",
+                    "path": "enums/ScrollBarInset"
+                },
+                {
+                    "title": "ScrollingDirection",
+                    "path": "enums/ScrollingDirection"
+                },
+                {
+                    "title": "SelectionBehavior",
+                    "path": "enums/SelectionBehavior"
+                },
+                {
+                    "title": "ServerAudioBehavior",
+                    "path": "enums/ServerAudioBehavior"
+                },
+                {
+                    "title": "SignalBehavior",
+                    "path": "enums/SignalBehavior"
+                },
+                {
+                    "title": "SizeConstraint",
+                    "path": "enums/SizeConstraint"
+                },
+                {
+                    "title": "SortDirection",
+                    "path": "enums/SortDirection"
+                },
+                {
+                    "title": "SortOrder",
+                    "path": "enums/SortOrder"
+                },
+                {
+                    "title": "SpecialKey",
+                    "path": "enums/SpecialKey"
+                },
+                {
+                    "title": "StartCorner",
+                    "path": "enums/StartCorner"
+                },
+                {
+                    "title": "Status",
+                    "path": "enums/Status"
+                },
+                {
+                    "title": "StreamOutBehavior",
+                    "path": "enums/StreamOutBehavior"
+                },
+                {
+                    "title": "StreamingIntegrityMode",
+                    "path": "enums/StreamingIntegrityMode"
+                },
+                {
+                    "title": "StreamingPauseMode",
+                    "path": "enums/StreamingPauseMode"
+                },
+                {
+                    "title": "StudioCloseMode",
+                    "path": "enums/StudioCloseMode"
+                },
+                {
+                    "title": "StudioDataModelType",
+                    "path": "enums/StudioDataModelType"
+                },
+                {
+                    "title": "StudioScriptEditorColorCategories",
+                    "path": "enums/StudioScriptEditorColorCategories"
+                },
+                {
+                    "title": "StudioScriptEditorColorPresets",
+                    "path": "enums/StudioScriptEditorColorPresets"
+                },
+                {
+                    "title": "StudioStyleGuideColor",
+                    "path": "enums/StudioStyleGuideColor"
+                },
+                {
+                    "title": "StudioStyleGuideModifier",
+                    "path": "enums/StudioStyleGuideModifier"
+                },
+                {
+                    "title": "Style",
+                    "path": "enums/Style"
+                },
+                {
+                    "title": "SurfaceConstraint",
+                    "path": "enums/SurfaceConstraint"
+                },
+                {
+                    "title": "SurfaceGuiSizingMode",
+                    "path": "enums/SurfaceGuiSizingMode"
+                },
+                {
+                    "title": "SurfaceType",
+                    "path": "enums/SurfaceType"
+                },
+                {
+                    "title": "SwipeDirection",
+                    "path": "enums/SwipeDirection"
+                },
+                {
+                    "title": "TableMajorAxis",
+                    "path": "enums/TableMajorAxis"
+                },
+                {
+                    "title": "Technology",
+                    "path": "enums/Technology"
+                },
+                {
+                    "title": "TeleportMethod",
+                    "path": "enums/TeleportMethod"
+                },
+                {
+                    "title": "TeleportResult",
+                    "path": "enums/TeleportResult"
+                },
+                {
+                    "title": "TeleportState",
+                    "path": "enums/TeleportState"
+                },
+                {
+                    "title": "TeleportType",
+                    "path": "enums/TeleportType"
+                },
+                {
+                    "title": "TerrainAcquisitionMethod",
+                    "path": "enums/TerrainAcquisitionMethod"
+                },
+                {
+                    "title": "TerrainFace",
+                    "path": "enums/TerrainFace"
+                },
+                {
+                    "title": "TextChatMessageStatus",
+                    "path": "enums/TextChatMessageStatus"
+                },
+                {
+                    "title": "TextFilterContext",
+                    "path": "enums/TextFilterContext"
+                },
+                {
+                    "title": "TextInputType",
+                    "path": "enums/TextInputType"
+                },
+                {
+                    "title": "TextTruncate",
+                    "path": "enums/TextTruncate"
+                },
+                {
+                    "title": "TextXAlignment",
+                    "path": "enums/TextXAlignment"
+                },
+                {
+                    "title": "TextYAlignment",
+                    "path": "enums/TextYAlignment"
+                },
+                {
+                    "title": "TextureMode",
+                    "path": "enums/TextureMode"
+                },
+                {
+                    "title": "TextureQueryType",
+                    "path": "enums/TextureQueryType"
+                },
+                {
+                    "title": "ThreadPoolConfig",
+                    "path": "enums/ThreadPoolConfig"
+                },
+                {
+                    "title": "ThrottlingPriority",
+                    "path": "enums/ThrottlingPriority"
+                },
+                {
+                    "title": "ThumbnailSize",
+                    "path": "enums/ThumbnailSize"
+                },
+                {
+                    "title": "ThumbnailType",
+                    "path": "enums/ThumbnailType"
+                },
+                {
+                    "title": "TickCountSampleMethod",
+                    "path": "enums/TickCountSampleMethod"
+                },
+                {
+                    "title": "TopBottom",
+                    "path": "enums/TopBottom"
+                },
+                {
+                    "title": "TouchCameraMovementMode",
+                    "path": "enums/TouchCameraMovementMode"
+                },
+                {
+                    "title": "TouchMovementMode",
+                    "path": "enums/TouchMovementMode"
+                },
+                {
+                    "title": "TrackerError",
+                    "path": "enums/TrackerError"
+                },
+                {
+                    "title": "TriStateBoolean",
+                    "path": "enums/TriStateBoolean"
+                },
+                {
+                    "title": "TweenStatus",
+                    "path": "enums/TweenStatus"
+                },
+                {
+                    "title": "UITheme",
+                    "path": "enums/UITheme"
+                },
+                {
+                    "title": "UiMessageType",
+                    "path": "enums/UiMessageType"
+                },
+                {
+                    "title": "UnionsScaleNonuniformly",
+                    "path": "enums/UnionsScaleNonuniformly"
+                },
+                {
+                    "title": "UsageContext",
+                    "path": "enums/UsageContext"
+                },
+                {
+                    "title": "UserCFrame",
+                    "path": "enums/UserCFrame"
+                },
+                {
+                    "title": "UserInputState",
+                    "path": "enums/UserInputState"
+                },
+                {
+                    "title": "UserInputType",
+                    "path": "enums/UserInputType"
+                },
+                {
+                    "title": "VRTouchpad",
+                    "path": "enums/VRTouchpad"
+                },
+                {
+                    "title": "VRTouchpadMode",
+                    "path": "enums/VRTouchpadMode"
+                },
+                {
+                    "title": "VelocityConstraintMode",
+                    "path": "enums/VelocityConstraintMode"
+                },
+                {
+                    "title": "VerticalAlignment",
+                    "path": "enums/VerticalAlignment"
+                },
+                {
+                    "title": "VerticalScrollBarPosition",
+                    "path": "enums/VerticalScrollBarPosition"
+                },
+                {
+                    "title": "VibrationMotor",
+                    "path": "enums/VibrationMotor"
+                },
+                {
+                    "title": "VirtualCursorMode",
+                    "path": "enums/VirtualCursorMode"
+                },
+                {
+                    "title": "VirtualInputMode",
+                    "path": "enums/VirtualInputMode"
+                },
+                {
+                    "title": "VoiceChatState",
+                    "path": "enums/VoiceChatState"
+                },
+                {
+                    "title": "VolumetricAudio",
+                    "path": "enums/VolumetricAudio"
+                },
+                {
+                    "title": "WaterDirection",
+                    "path": "enums/WaterDirection"
+                },
+                {
+                    "title": "WaterForce",
+                    "path": "enums/WaterForce"
+                },
+                {
+                    "title": "WrapLayerAutoSkin",
+                    "path": "enums/WrapLayerAutoSkin"
+                },
+                {
+                    "title": "WrapLayerDebugMode",
+                    "path": "enums/WrapLayerDebugMode"
+                },
+                {
+                    "title": "WrapTargetDebugMode",
+                    "path": "enums/WrapTargetDebugMode"
+                },
+                {
+                    "title": "ZIndexBehavior",
+                    "path": "enums/ZIndexBehavior"
+                }
+            ]
+        },
+        {
+            "heading": "GLOBAL",
+            "navigation": [
+                {
+                    "title": "Lua Globals",
+                    "path": "globals/LuaGlobals"
+                },
+                {
+                    "title": "Roblox Globals",
+                    "path": "globals/RobloxGlobals"
+                }
+            ]
+        },
+        {
+            "heading": "LIBRARY",
+            "navigation": [
+                {
+                    "title": "bit32",
+                    "path": "libraries/bit32"
+                },
+                {
+                    "title": "coroutine",
+                    "path": "libraries/coroutine"
+                },
+                {
+                    "title": "debug",
+                    "path": "libraries/debug"
+                },
+                {
+                    "title": "math",
+                    "path": "libraries/math"
+                },
+                {
+                    "title": "os",
+                    "path": "libraries/os"
+                },
+                {
+                    "title": "string",
+                    "path": "libraries/string"
+                },
+                {
+                    "title": "table",
+                    "path": "libraries/table"
+                },
+                {
+                    "title": "task",
+                    "path": "libraries/task"
+                },
+                {
+                    "title": "utf8",
+                    "path": "libraries/utf8"
+                }
+            ]
+        }
+    ],
+    "classReferenceParents": null
+}

@@ -1,0 +1,65 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: FaceControls
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ FaceControls:
+
+--- @class FaceControls : Instance
+--- @field ChinRaiser number
+--- @field ChinRaiserUpperLip number
+--- @field Corrugator number
+--- @field EyesLookDown number
+--- @field EyesLookLeft number
+--- @field EyesLookRight number
+--- @field EyesLookUp number
+--- @field FlatPucker number
+--- @field Funneler number
+--- @field JawDrop number
+--- @field JawLeft number
+--- @field JawRight number
+--- @field LeftBrowLowerer number
+--- @field LeftCheekPuff number
+--- @field LeftCheekRaiser number
+--- @field LeftDimpler number
+--- @field LeftEyeClosed number
+--- @field LeftEyeUpperLidRaiser number
+--- @field LeftInnerBrowRaiser number
+--- @field LeftLipCornerDown number
+--- @field LeftLipCornerPuller number
+--- @field LeftLipStretcher number
+--- @field LeftLowerLipDepressor number
+--- @field LeftNoseWrinkler number
+--- @field LeftOuterBrowRaiser number
+--- @field LeftUpperLipRaiser number
+--- @field LipPresser number
+--- @field LipsTogether number
+--- @field LowerLipSuck number
+--- @field MouthLeft number
+--- @field MouthRight number
+--- @field Pucker number
+--- @field RightBrowLowerer number
+--- @field RightCheekPuff number
+--- @field RightCheekRaiser number
+--- @field RightDimpler number
+--- @field RightEyeClosed number
+--- @field RightEyeUpperLidRaiser number
+--- @field RightInnerBrowRaiser number
+--- @field RightLipCornerDown number
+--- @field RightLipCornerPuller number
+--- @field RightLipStretcher number
+--- @field RightLowerLipDepressor number
+--- @field RightNoseWrinkler number
+--- @field RightOuterBrowRaiser number
+--- @field RightUpperLipRaiser number
+--- @field TongueDown number
+--- @field TongueOut number
+--- @field TongueUp number
+--- @field UpperLipSuck number
+
+--}}} End of FaceControls;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

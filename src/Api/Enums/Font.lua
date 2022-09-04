@@ -1,0 +1,62 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: Font
+ --->> Type: EnumItem
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ Font:
+
+--- @class Enum.Font : EnumItem
+--- @field Legacy Enum.Font @0
+--- @field Arial Enum.Font @1
+--- @field ArialBold Enum.Font @2
+--- @field SourceSans Enum.Font @3
+--- @field SourceSansBold Enum.Font @4
+--- @field SourceSansSemibold Enum.Font @16
+--- @field SourceSansLight Enum.Font @5
+--- @field SourceSansItalic Enum.Font @6
+--- @field Bodoni Enum.Font @7
+--- @field Garamond Enum.Font @8
+--- @field Cartoon Enum.Font @9
+--- @field Code Enum.Font @10
+--- @field Highway Enum.Font @11
+--- @field SciFi Enum.Font @12
+--- @field Arcade Enum.Font @13
+--- @field Fantasy Enum.Font @14
+--- @field Antique Enum.Font @15
+--- @field Gotham Enum.Font @17
+--- @field GothamMedium Enum.Font @18
+--- @field GothamBold Enum.Font @19
+--- @field GothamBlack Enum.Font @20
+--- @field AmaticSC Enum.Font @21
+--- @field Bangers Enum.Font @22
+--- @field Creepster Enum.Font @23
+--- @field DenkOne Enum.Font @24
+--- @field Fondamento Enum.Font @25
+--- @field FredokaOne Enum.Font @26
+--- @field GrenzeGotisch Enum.Font @27
+--- @field IndieFlower Enum.Font @28
+--- @field JosefinSans Enum.Font @29
+--- @field Jura Enum.Font @30
+--- @field Kalam Enum.Font @31
+--- @field LuckiestGuy Enum.Font @32
+--- @field Merriweather Enum.Font @33
+--- @field Michroma Enum.Font @34
+--- @field Nunito Enum.Font @35
+--- @field Oswald Enum.Font @36
+--- @field PatrickHand Enum.Font @37
+--- @field PermanentMarker Enum.Font @38
+--- @field Roboto Enum.Font @39
+--- @field RobotoCondensed Enum.Font @40
+--- @field RobotoMono Enum.Font @41
+--- @field Sarpanch Enum.Font @42
+--- @field SpecialElite Enum.Font @43
+--- @field TitilliumWeb Enum.Font @44
+--- @field Ubuntu Enum.Font @45
+--- @field Unknown Enum.Font @100
+
+--}}} End of Font;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

@@ -1,0 +1,64 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: Plugin
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ Plugin:
+
+--- @class Plugin : Instance
+--- @field CollisionEnabled boolean
+--- @field GridSize number
+--- @field HostDataModelType Enum.StudioDataModelType
+--- @field HostDataModelTypeIsCurrent boolean
+--- @field MultipleDocumentInterfaceInstance MultipleDocumentInterfaceInstance
+--- @field UsesAssetInsertionDrag boolean
+--- @field Activate fun( self : Plugin, exclusiveMouse : boolean )
+--- @field CreatePluginAction fun( self : Plugin, actionId : string, text : string, statusTip : string, iconName : string, allowBinding : boolean ) : PluginAction
+--- @field CreatePluginMenu fun( self : Plugin, id : string, title : string, icon : string ) : PluginMenu
+--- @field CreateToolbar fun( self : Plugin, name : string ) : PluginToolbar
+--- @field Deactivate fun( self : Plugin )
+--- @field GetItem fun( self : Plugin, key : string, defaultValue : table<any, any> ) : table<any, any>
+--- @field GetJoinMode fun( self : Plugin ) : Enum.JointCreationMode
+--- @field GetMouse fun( self : Plugin ) : PluginMouse
+--- @field GetSelectedRibbonTool fun( self : Plugin ) : Enum.RibbonTool
+--- @field GetSetting fun( self : Plugin, key : string ) : table<any, any>
+--- @field GetStudioUserId fun( self : Plugin ) : number
+--- @field Invoke fun( self : Plugin, key : string, arguments : table<any, any> )
+--- @field IsActivated fun( self : Plugin ) : boolean
+--- @field IsActivatedWithExclusiveMouse fun( self : Plugin ) : boolean
+--- @field Negate fun( self : Plugin, objects : Instance[ ]|any[ ] ) : Instance[ ]|any[ ]
+--- @field OnInvoke fun( self : Plugin, key : string, callback : fun( ) ) : Instance
+--- @field OnSetItem fun( self : Plugin, key : string, callback : fun( ) ) : Instance
+--- @field OpenScript fun( self : Plugin, script : LuaSourceContainer, lineNumber : number )
+--- @field OpenWikiPage fun( self : Plugin, url : string )
+--- @field PauseSound fun( self : Plugin, sound : Instance )
+--- @field PlaySound fun( self : Plugin, sound : Instance, normalizedTimePosition : number )
+--- @field ResumeSound fun( self : Plugin, sound : Instance )
+--- @field SaveSelectedToRoblox fun( self : Plugin )
+--- @field SelectRibbonTool fun( self : Plugin, tool : Enum.RibbonTool, position : UDim2 )
+--- @field Separate fun( self : Plugin, objects : Instance[ ]|any[ ] ) : Instance[ ]|any[ ]
+--- @field SetItem fun( self : Plugin, key : string, value : table<any, any> )
+--- @field SetReady fun( self : Plugin )
+--- @field SetSetting fun( self : Plugin, key : string, value : table<any, any> )
+--- @field StartDecalDrag fun( self : Plugin, decal : Instance )
+--- @field StartDrag fun( self : Plugin, dragData : table<string, any> )
+--- @field StopAllSounds fun( self : Plugin )
+--- @field Union fun( self : Plugin, objects : Instance[ ]|any[ ] ) : Instance
+--- @field CreateDockWidgetPluginGui fun( self : Plugin, pluginGuiId : string, dockWidgetPluginGuiInfo : DockWidgetPluginGuiInfo ) : DockWidgetPluginGui
+--- @field CreateQWidgetPluginGui fun( self : Plugin, pluginGuiId : string, pluginGuiOptions : table<string, any> ) : QWidgetPluginGui
+--- @field ImportFbxAnimation fun( self : Plugin, rigModel : Instance, isR15 : boolean ) : Instance
+--- @field ImportFbxRig fun( self : Plugin, isR15 : boolean ) : Instance
+--- @field PromptForExistingAssetId fun( self : Plugin, assetType : string ) : number
+--- @field PromptSaveSelection fun( self : Plugin, suggestedFileName : string ) : boolean
+--- @field Deactivation RBXScriptSignal@fun( )
+--- @field Ready RBXScriptSignal@fun( )
+--- @field Unloading RBXScriptSignal@fun( )
+--- @field ProcessAssetInsertionDrag fun( self : Plugin, assetId : string, assetTypeId : number, instances : Instance[ ]|any[ ] ) : Instance[ ]|any[ ]
+--- @field ProcessAssetInsertionDrop fun( self : Plugin )
+
+--}}} End of Plugin;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

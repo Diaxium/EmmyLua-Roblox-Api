@@ -1,0 +1,119 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: Player
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ Player:
+
+--- @class Player : Instance
+--- @field AccountAge number
+--- @field AppearanceDidLoad boolean
+--- @field AutoJumpEnabled boolean
+--- @field CameraMaxZoomDistance number
+--- @field CameraMinZoomDistance number
+--- @field CameraMode Enum.CameraMode
+--- @field CanLoadCharacterAppearance boolean
+--- @field Character Model
+--- @field CharacterAppearance string
+--- @field CharacterAppearanceId number
+--- @field ChatMode Enum.ChatMode
+--- @field DataComplexity number
+--- @field DataComplexityLimit number
+--- @field DataReady boolean
+--- @field DevCameraOcclusionMode Enum.DevCameraOcclusionMode
+--- @field DevComputerCameraMode Enum.DevComputerCameraMovementMode
+--- @field DevComputerMovementMode Enum.DevComputerMovementMode
+--- @field DevEnableMouseLock boolean
+--- @field DevTouchCameraMode Enum.DevTouchCameraMovementMode
+--- @field DevTouchMovementMode Enum.DevTouchMovementMode
+--- @field DisplayName string
+--- @field FollowUserId number
+--- @field GameplayPaused boolean
+--- @field Guest boolean
+--- @field HealthDisplayDistance number
+--- @field LocaleId string
+--- @field MaximumSimulationRadius number
+--- @field MembershipType Enum.MembershipType
+--- @field NameDisplayDistance number
+--- @field Neutral boolean
+--- @field OsPlatform string
+--- @field PlatformName string
+--- @field ReplicationFocus Instance
+--- @field RespawnLocation SpawnLocation
+--- @field SimulationRadius number
+--- @field Team Team
+--- @field TeamColor BrickColor
+--- @field Teleported boolean
+--- @field TeleportedIn boolean
+--- @field UserId number
+--- @field VRDevice string
+--- @field userId number
+--- @field AddToBlockList fun( self : Player, userIds : table<number, any> )
+--- @field ClearCharacterAppearance fun( self : Player )
+--- @field DistanceFromCharacter fun( self : Player, point : Vector3 ) : number
+--- @field GetFriendStatus fun( self : Player, player : Player ) : Enum.FriendStatus
+--- @field GetGameSessionID fun( self : Player ) : string
+--- @field GetJoinData fun( self : Player ) : table<string, any>
+--- @field GetMouse fun( self : Player ) : Mouse
+--- @field GetNetworkPing fun( self : Player ) : number
+--- @field GetUnder13 fun( self : Player ) : boolean
+--- @field HasAppearanceLoaded fun( self : Player ) : boolean
+--- @field Kick fun( self : Player, message : string )
+--- @field LoadBoolean fun( self : Player, key : string ) : boolean
+--- @field LoadCharacterAppearance fun( self : Player, assetInstance : Instance )
+--- @field LoadData fun( self : Player )
+--- @field LoadInstance fun( self : Player, key : string ) : Instance
+--- @field LoadNumber fun( self : Player, key : string ) : number
+--- @field LoadString fun( self : Player, key : string ) : string
+--- @field Move fun( self : Player, walkDirection : Vector3, relativeToCamera : boolean )
+--- @field RemoveCharacter fun( self : Player )
+--- @field RequestFriendship fun( self : Player, player : Player )
+--- @field RevokeFriendship fun( self : Player, player : Player )
+--- @field SaveBoolean fun( self : Player, key : string, value : boolean )
+--- @field SaveData fun( self : Player )
+--- @field SaveInstance fun( self : Player, key : string, value : Instance )
+--- @field SaveNumber fun( self : Player, key : string, value : number )
+--- @field SaveString fun( self : Player, key : string, value : string )
+--- @field SetAccountAge fun( self : Player, accountAge : number )
+--- @field SetCharacterAppearanceJson fun( self : Player, jsonBlob : string )
+--- @field SetMembershipType fun( self : Player, membershipType : Enum.MembershipType )
+--- @field SetModerationAccessKey fun( self : Player, moderationAccessKey : string )
+--- @field SetSuperSafeChat fun( self : Player, value : boolean )
+--- @field SetUnder13 fun( self : Player, value : boolean )
+--- @field UpdatePlayerBlocked fun( self : Player, userId : number, blocked : boolean )
+--- @field loadBoolean fun( self : Player, key : string ) : boolean
+--- @field loadInstance fun( self : Player, key : string ) : Instance
+--- @field loadNumber fun( self : Player, key : string ) : number
+--- @field loadString fun( self : Player, key : string ) : string
+--- @field saveBoolean fun( self : Player, key : string, value : boolean )
+--- @field saveInstance fun( self : Player, key : string, value : Instance )
+--- @field saveNumber fun( self : Player, key : string, value : number )
+--- @field saveString fun( self : Player, key : string, value : string )
+--- @field GetFriendsOnline fun( self : Player, maxFriends : number ) : table<number, any>
+--- @field GetRankInGroup fun( self : Player, groupId : number ) : number
+--- @field GetRoleInGroup fun( self : Player, groupId : number ) : string
+--- @field IsBestFriendsWith fun( self : Player, userId : number ) : boolean
+--- @field IsFriendsWith fun( self : Player, userId : number ) : boolean
+--- @field IsInGroup fun( self : Player, groupId : number ) : boolean
+--- @field LoadCharacter fun( self : Player )
+--- @field LoadCharacterBlocking fun( self : Player )
+--- @field LoadCharacterWithHumanoidDescription fun( self : Player, humanoidDescription : HumanoidDescription )
+--- @field RequestStreamAroundAsync fun( self : Player, position : Vector3, timeOut : number )
+--- @field WaitForDataReady fun( self : Player ) : boolean
+--- @field isFriendsWith fun( self : Player, userId : number ) : boolean
+--- @field waitForDataReady fun( self : Player ) : boolean
+--- @field CharacterAdded RBXScriptSignal@fun( character : Model )
+--- @field CharacterAppearanceLoaded RBXScriptSignal@fun( character : Model )
+--- @field CharacterRemoving RBXScriptSignal@fun( character : Model )
+--- @field Chatted RBXScriptSignal@fun( message : string, recipient : Player )
+--- @field FriendStatusChanged RBXScriptSignal@fun( player : Player, friendStatus : Enum.FriendStatus )
+--- @field Idled RBXScriptSignal@fun( time : number )
+--- @field OnTeleport RBXScriptSignal@fun( teleportState : Enum.TeleportState, placeId : number, spawnName : string )
+--- @field SimulationRadiusChanged RBXScriptSignal@fun( radius : number )
+
+--}}} End of Player;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

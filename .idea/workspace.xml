@@ -16,8 +16,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2E0bgIlXMcpOnk5S9J2FwPUIQ8v" />
   <component name="ProjectViewState">
@@ -31,13 +37,25 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.6.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.6.0&quot;,
     &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Advan/Mega/Projects/Roblox/Utilities/Emmy-Roblox Api&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Advan/Mega/Projects/Roblox/Utilities/EmmyLua-Roblox-Api/src/Phasers/Global&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.4\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\EmmyLua-Roblox-Api\src\Phasers\Global" />
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\EmmyLua-Roblox-Api\src\Phasers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\EmmyLua-Roblox-Api\src\Utilities" />
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\EmmyLua-Roblox-Api\src\Phasers" />
+      <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\EmmyLua-Roblox-Api\src\Utilities\Roblox" />
       <recent name="C:\Users\Advan\Mega\Projects\Roblox\Utilities\Roblox\src" />
     </key>
   </component>
@@ -45,11 +63,23 @@
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="Classes.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Phasers/Classes.js" working-dir="$PROJECT_DIR$/src/Phasers">
+      <method v="2" />
+    </configuration>
+    <configuration name="Property.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Phasers/Class/Property.js" working-dir="$PROJECT_DIR$/src/Phasers/Class">
+      <method v="2" />
+    </configuration>
     <configuration name="Test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Utilities/Test.js" working-dir="$PROJECT_DIR$/src/Utilities">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.App.js" />
+        <item itemvalue="Node.js.Property.js" />
+        <item itemvalue="Node.js.Classes.js" />
         <item itemvalue="Node.js.App.js" />
         <item itemvalue="Node.js.Test.js" />
       </list>
@@ -75,6 +105,15 @@
       <workItem from="1661746167127" duration="65000" />
       <workItem from="1661746242199" duration="7739000" />
       <workItem from="1661796676414" duration="45127000" />
+      <workItem from="1662009831892" duration="658000" />
+      <workItem from="1662010977689" duration="2283000" />
+      <workItem from="1662247267954" duration="10473000" />
+      <workItem from="1662265851110" duration="12687000" />
+      <workItem from="1662279274844" duration="859000" />
+      <workItem from="1662280351829" duration="68000" />
+      <workItem from="1662281221110" duration="319000" />
+      <workItem from="1662324422165" duration="4873000" />
+      <workItem from="1662329445847" duration="242000" />
     </task>
     <servers />
   </component>

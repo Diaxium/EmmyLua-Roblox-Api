@@ -1,0 +1,91 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: UserInputService
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ UserInputService:
+
+--- @class UserInputService : Instance
+--- @field AccelerometerEnabled boolean
+--- @field BottomBarSize Vector2
+--- @field GamepadEnabled boolean
+--- @field GazeSelectionEnabled boolean
+--- @field GyroscopeEnabled boolean
+--- @field KeyboardEnabled boolean
+--- @field LegacyInputEventsEnabled boolean
+--- @field ModalEnabled boolean
+--- @field MouseBehavior Enum.MouseBehavior
+--- @field MouseDeltaSensitivity number
+--- @field MouseEnabled boolean
+--- @field MouseIconEnabled boolean
+--- @field NavBarSize Vector2
+--- @field OnScreenKeyboardAnimationDuration number
+--- @field OnScreenKeyboardPosition Vector2
+--- @field OnScreenKeyboardSize Vector2
+--- @field OnScreenKeyboardVisible boolean
+--- @field OverrideMouseIconBehavior Enum.OverrideMouseIconBehavior
+--- @field RightBarSize Vector2
+--- @field StatusBarSize Vector2
+--- @field TouchEnabled boolean
+--- @field UserHeadCFrame CFrame
+--- @field VREnabled boolean
+--- @field GamepadSupports fun( self : UserInputService, gamepadNum : Enum.UserInputType, gamepadKeyCode : Enum.KeyCode ) : boolean
+--- @field GetConnectedGamepads fun( self : UserInputService ) : table<number, any>
+--- @field GetDeviceAcceleration fun( self : UserInputService ) : InputObject
+--- @field GetDeviceGravity fun( self : UserInputService ) : InputObject
+--- @field GetDeviceRotation fun( self : UserInputService ) : table<any, any>
+--- @field GetDeviceType fun( self : UserInputService ) : Enum.DeviceType
+--- @field GetFocusedTextBox fun( self : UserInputService ) : TextBox
+--- @field GetGamepadConnected fun( self : UserInputService, gamepadNum : Enum.UserInputType ) : boolean
+--- @field GetGamepadState fun( self : UserInputService, gamepadNum : Enum.UserInputType ) : table<number, any>
+--- @field GetKeysPressed fun( self : UserInputService ) : table<number, any>
+--- @field GetLastInputType fun( self : UserInputService ) : Enum.UserInputType
+--- @field GetMouseButtonsPressed fun( self : UserInputService ) : table<number, any>
+--- @field GetMouseDelta fun( self : UserInputService ) : Vector2
+--- @field GetMouseLocation fun( self : UserInputService ) : Vector2
+--- @field GetNavigationGamepads fun( self : UserInputService ) : table<number, any>
+--- @field GetPlatform fun( self : UserInputService ) : Enum.Platform
+--- @field GetStringForKeyCode fun( self : UserInputService, keyCode : Enum.KeyCode ) : string
+--- @field GetSupportedGamepadKeyCodes fun( self : UserInputService, gamepadNum : Enum.UserInputType ) : table<number, any>
+--- @field GetUserCFrame fun( self : UserInputService, type : Enum.UserCFrame ) : CFrame
+--- @field IsGamepadButtonDown fun( self : UserInputService, gamepadNum : Enum.UserInputType, gamepadKeyCode : Enum.KeyCode ) : boolean
+--- @field IsKeyDown fun( self : UserInputService, keyCode : Enum.KeyCode ) : boolean
+--- @field IsMouseButtonPressed fun( self : UserInputService, mouseButton : Enum.UserInputType ) : boolean
+--- @field IsNavigationGamepad fun( self : UserInputService, gamepadEnum : Enum.UserInputType ) : boolean
+--- @field RecenterUserHeadCFrame fun( self : UserInputService )
+--- @field SendAppUISizes fun( self : UserInputService, statusBarSize : Vector2, navBarSize : Vector2, bottomBarSize : Vector2, rightBarSize : Vector2 )
+--- @field SetNavigationGamepad fun( self : UserInputService, gamepadEnum : Enum.UserInputType, enabled : boolean )
+--- @field DeviceAccelerationChanged RBXScriptSignal@fun( acceleration : InputObject )
+--- @field DeviceGravityChanged RBXScriptSignal@fun( gravity : InputObject )
+--- @field DeviceRotationChanged RBXScriptSignal@fun( rotation : InputObject, cframe : CFrame )
+--- @field GamepadConnected RBXScriptSignal@fun( gamepadNum : Enum.UserInputType )
+--- @field GamepadDisconnected RBXScriptSignal@fun( gamepadNum : Enum.UserInputType )
+--- @field InputBegan RBXScriptSignal@fun( input : InputObject, gameProcessedEvent : boolean )
+--- @field InputChanged RBXScriptSignal@fun( input : InputObject, gameProcessedEvent : boolean )
+--- @field InputEnded RBXScriptSignal@fun( input : InputObject, gameProcessedEvent : boolean )
+--- @field JumpRequest RBXScriptSignal@fun( )
+--- @field LastInputTypeChanged RBXScriptSignal@fun( lastInputType : Enum.UserInputType )
+--- @field PointerAction RBXScriptSignal@fun( wheel : number, pan : Vector2, pinch : number, gameProcessedEvent : boolean )
+--- @field StatusBarTapped RBXScriptSignal@fun( position : Vector2 )
+--- @field TextBoxFocusReleased RBXScriptSignal@fun( textboxReleased : TextBox )
+--- @field TextBoxFocused RBXScriptSignal@fun( textboxFocused : TextBox )
+--- @field TouchEnded RBXScriptSignal@fun( touch : InputObject, gameProcessedEvent : boolean )
+--- @field TouchLongPress RBXScriptSignal@fun( touchPositions : table<number, any>, state : Enum.UserInputState, gameProcessedEvent : boolean )
+--- @field TouchMoved RBXScriptSignal@fun( touch : InputObject, gameProcessedEvent : boolean )
+--- @field TouchPan RBXScriptSignal@fun( touchPositions : table<number, any>, totalTranslation : Vector2, velocity : Vector2, state : Enum.UserInputState, gameProcessedEvent : boolean )
+--- @field TouchPinch RBXScriptSignal@fun( touchPositions : table<number, any>, scale : number, velocity : number, state : Enum.UserInputState, gameProcessedEvent : boolean )
+--- @field TouchRotate RBXScriptSignal@fun( touchPositions : table<number, any>, rotation : number, velocity : number, state : Enum.UserInputState, gameProcessedEvent : boolean )
+--- @field TouchStarted RBXScriptSignal@fun( touch : InputObject, gameProcessedEvent : boolean )
+--- @field TouchSwipe RBXScriptSignal@fun( swipeDirection : Enum.SwipeDirection, numberOfTouches : number, gameProcessedEvent : boolean )
+--- @field TouchTap RBXScriptSignal@fun( touchPositions : table<number, any>, gameProcessedEvent : boolean )
+--- @field TouchTapInWorld RBXScriptSignal@fun( position : Vector2, processedByUI : boolean )
+--- @field UserCFrameChanged RBXScriptSignal@fun( type : Enum.UserCFrame, value : CFrame )
+--- @field WindowFocusReleased RBXScriptSignal@fun( )
+--- @field WindowFocused RBXScriptSignal@fun( )
+
+--}}} End of UserInputService;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

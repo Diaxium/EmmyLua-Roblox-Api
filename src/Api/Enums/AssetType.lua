@@ -1,0 +1,73 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: AssetType
+ --->> Type: EnumItem
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ AssetType:
+
+--- @class Enum.AssetType : EnumItem
+--- @field Image Enum.AssetType @1
+--- @field TShirt Enum.AssetType @2
+--- @field Audio Enum.AssetType @3
+--- @field Mesh Enum.AssetType @4
+--- @field Lua Enum.AssetType @5
+--- @field Hat Enum.AssetType @8
+--- @field Place Enum.AssetType @9
+--- @field Model Enum.AssetType @10
+--- @field Shirt Enum.AssetType @11
+--- @field Pants Enum.AssetType @12
+--- @field Decal Enum.AssetType @13
+--- @field Head Enum.AssetType @17
+--- @field Face Enum.AssetType @18
+--- @field Gear Enum.AssetType @19
+--- @field Badge Enum.AssetType @21
+--- @field Animation Enum.AssetType @24
+--- @field Torso Enum.AssetType @27
+--- @field RightArm Enum.AssetType @28
+--- @field LeftArm Enum.AssetType @29
+--- @field LeftLeg Enum.AssetType @30
+--- @field RightLeg Enum.AssetType @31
+--- @field Package Enum.AssetType @32
+--- @field GamePass Enum.AssetType @34
+--- @field Plugin Enum.AssetType @38
+--- @field MeshPart Enum.AssetType @40
+--- @field HairAccessory Enum.AssetType @41
+--- @field FaceAccessory Enum.AssetType @42
+--- @field NeckAccessory Enum.AssetType @43
+--- @field ShoulderAccessory Enum.AssetType @44
+--- @field FrontAccessory Enum.AssetType @45
+--- @field BackAccessory Enum.AssetType @46
+--- @field WaistAccessory Enum.AssetType @47
+--- @field ClimbAnimation Enum.AssetType @48
+--- @field DeathAnimation Enum.AssetType @49
+--- @field FallAnimation Enum.AssetType @50
+--- @field IdleAnimation Enum.AssetType @51
+--- @field JumpAnimation Enum.AssetType @52
+--- @field RunAnimation Enum.AssetType @53
+--- @field SwimAnimation Enum.AssetType @54
+--- @field WalkAnimation Enum.AssetType @55
+--- @field PoseAnimation Enum.AssetType @56
+--- @field MoodAnimation Enum.AssetType @78
+--- @field EarAccessory Enum.AssetType @57
+--- @field EyeAccessory Enum.AssetType @58
+--- @field EmoteAnimation Enum.AssetType @61
+--- @field Video Enum.AssetType @62
+--- @field TShirtAccessory Enum.AssetType @64
+--- @field ShirtAccessory Enum.AssetType @65
+--- @field PantsAccessory Enum.AssetType @66
+--- @field JacketAccessory Enum.AssetType @67
+--- @field SweaterAccessory Enum.AssetType @68
+--- @field ShortsAccessory Enum.AssetType @69
+--- @field LeftShoeAccessory Enum.AssetType @70
+--- @field RightShoeAccessory Enum.AssetType @71
+--- @field DressSkirtAccessory Enum.AssetType @72
+--- @field EyebrowAccessory Enum.AssetType @76
+--- @field EyelashAccessory Enum.AssetType @77
+--- @field DynamicHead Enum.AssetType @79
+
+--}}} End of AssetType;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

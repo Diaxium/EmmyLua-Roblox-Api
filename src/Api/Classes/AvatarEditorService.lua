@@ -1,0 +1,74 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: AvatarEditorService
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ AvatarEditorService:
+
+--- @class AvatarEditorService : Instance
+--- @field NoPromptCreateOutfit fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType, name : string ) : boolean
+--- @field NoPromptDeleteOutfit fun( self : AvatarEditorService, outfitId : number ) : boolean
+--- @field NoPromptRenameOutfit fun( self : AvatarEditorService, outfitId : number, name : string ) : boolean
+--- @field NoPromptSaveAvatar fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType, saveDict : table<string, any>, gearAssetId : number ) : boolean
+--- @field NoPromptSetFavorite fun( self : AvatarEditorService, itemId : number, itemType : Enum.AvatarItemType, shouldFavorite : boolean ) : boolean
+--- @field NoPromptUpdateOutfit fun( self : AvatarEditorService, outfitId : number, humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType ) : boolean
+--- @field PerformCreateOutfitWithDescription fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription, name : string )
+--- @field PerformDeleteOutfit fun( self : AvatarEditorService )
+--- @field PerformRenameOutfit fun( self : AvatarEditorService, name : string )
+--- @field PerformSaveAvatarWithDescription fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription, addedAssets : table<number, any>, removedAssets : table<number, any> )
+--- @field PerformSetFavorite fun( self : AvatarEditorService )
+--- @field PerformUpdateOutfit fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription )
+--- @field PromptAllowInventoryReadAccess fun( self : AvatarEditorService )
+--- @field PromptCreateOutfit fun( self : AvatarEditorService, outfit : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field PromptDeleteOutfit fun( self : AvatarEditorService, outfitId : number )
+--- @field PromptRenameOutfit fun( self : AvatarEditorService, outfitId : number )
+--- @field PromptSaveAvatar fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field PromptSetFavorite fun( self : AvatarEditorService, itemId : number, itemType : Enum.AvatarItemType, shouldFavorite : boolean )
+--- @field PromptUpdateOutfit fun( self : AvatarEditorService, outfitId : number, updatedOutfit : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field SetAllowInventoryReadAccess fun( self : AvatarEditorService, inventoryReadAccessGranted : boolean )
+--- @field SignalCreateOutfitFailed fun( self : AvatarEditorService )
+--- @field SignalCreateOutfitPermissionDenied fun( self : AvatarEditorService )
+--- @field SignalDeleteOutfitFailed fun( self : AvatarEditorService )
+--- @field SignalDeleteOutfitPermissionDenied fun( self : AvatarEditorService )
+--- @field SignalRenameOutfitFailed fun( self : AvatarEditorService )
+--- @field SignalRenameOutfitPermissionDenied fun( self : AvatarEditorService )
+--- @field SignalSaveAvatarFailed fun( self : AvatarEditorService )
+--- @field SignalSaveAvatarPermissionDenied fun( self : AvatarEditorService )
+--- @field SignalSetFavoriteFailed fun( self : AvatarEditorService )
+--- @field SignalSetFavoritePermissionDenied fun( self : AvatarEditorService )
+--- @field SignalUpdateOutfitFailed fun( self : AvatarEditorService )
+--- @field SignalUpdateOutfitPermissionDenied fun( self : AvatarEditorService )
+--- @field CheckApplyDefaultClothing fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription ) : HumanoidDescription
+--- @field ConformToAvatarRules fun( self : AvatarEditorService, humanoidDescription : HumanoidDescription ) : HumanoidDescription
+--- @field GetAvatarRules fun( self : AvatarEditorService ) : table<string, any>
+--- @field GetBatchItemDetails fun( self : AvatarEditorService, itemIds : table<number, any>, itemType : Enum.AvatarItemType ) : table<number, any>
+--- @field GetFavorite fun( self : AvatarEditorService, itemId : number, itemType : Enum.AvatarItemType ) : boolean
+--- @field GetInventory fun( self : AvatarEditorService, assetTypes : table<number, any> ) : InventoryPages
+--- @field GetItemDetails fun( self : AvatarEditorService, itemId : number, itemType : Enum.AvatarItemType ) : table<string, any>
+--- @field GetOutfits fun( self : AvatarEditorService, outfitSource : Enum.OutfitSource, outfitType : Enum.OutfitType ) : OutfitPages
+--- @field GetRecommendedAssets fun( self : AvatarEditorService, assetType : Enum.AvatarAssetType, contextAssetId : number ) : table<number, any>
+--- @field GetRecommendedAssetsV2 fun( self : AvatarEditorService, assetType : Enum.AvatarAssetType, assetId : number, numItems : number, includeDetails : boolean ) : table<number, any>
+--- @field GetRecommendedBundles fun( self : AvatarEditorService, bundleId : number ) : table<number, any>
+--- @field GetRecommendedBundlesV2 fun( self : AvatarEditorService, bundleType : Enum.BundleType, bundleId : number, numItems : number, includeDetails : boolean ) : table<number, any>
+--- @field SearchCatalog fun( self : AvatarEditorService, searchParameters : CatalogSearchParams ) : CatalogPages
+--- @field OpenAllowInventoryReadAccess RBXScriptSignal@fun( )
+--- @field OpenPromptCreateOufit RBXScriptSignal@fun( humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field OpenPromptDeleteOutfit RBXScriptSignal@fun( outfitId : number )
+--- @field OpenPromptRenameOutfit RBXScriptSignal@fun( outfitId : number )
+--- @field OpenPromptSaveAvatar RBXScriptSignal@fun( humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field OpenPromptSetFavorite RBXScriptSignal@fun( itemId : number, itemType : Enum.AvatarItemType, shouldFavorite : boolean )
+--- @field OpenPromptUpdateOutfit RBXScriptSignal@fun( outfitId : number, humanoidDescription : HumanoidDescription, rigType : Enum.HumanoidRigType )
+--- @field PromptAllowInventoryReadAccessCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult )
+--- @field PromptCreateOutfitCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult, failureType : table<any, any> )
+--- @field PromptDeleteOutfitCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult )
+--- @field PromptRenameOutfitCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult )
+--- @field PromptSaveAvatarCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult, humanoidDescription : HumanoidDescription )
+--- @field PromptSetFavoriteCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult )
+--- @field PromptUpdateOutfitCompleted RBXScriptSignal@fun( result : Enum.AvatarPromptResult )
+
+--}}} End of AvatarEditorService;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

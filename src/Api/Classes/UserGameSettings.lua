@@ -1,0 +1,67 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: UserGameSettings
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ UserGameSettings:
+
+--- @class UserGameSettings : Instance
+--- @field AllTutorialsDisabled boolean
+--- @field CameraMode Enum.CustomCameraMode
+--- @field CameraYInverted boolean
+--- @field ChatVisible boolean
+--- @field ComputerCameraMovementMode Enum.ComputerCameraMovementMode
+--- @field ComputerMovementMode Enum.ComputerMovementMode
+--- @field ControlMode Enum.ControlMode
+--- @field DefaultCameraID string
+--- @field Fullscreen boolean
+--- @field GamepadCameraSensitivity number
+--- @field GraphicsQualityLevel number
+--- @field HasEverUsedVR boolean
+--- @field IsUsingCameraYInverted boolean
+--- @field IsUsingGamepadCameraSensitivity boolean
+--- @field MasterVolume number
+--- @field MicroProfilerWebServerEnabled boolean
+--- @field MicroProfilerWebServerIP string
+--- @field MicroProfilerWebServerPort number
+--- @field MouseSensitivity number
+--- @field MouseSensitivityFirstPerson Vector2
+--- @field MouseSensitivityThirdPerson Vector2
+--- @field OnScreenProfilerEnabled boolean
+--- @field OnboardingsCompleted string
+--- @field PerformanceStatsVisible boolean
+--- @field RCCProfilerRecordFrameRate number
+--- @field RCCProfilerRecordTimeFrame number
+--- @field RotationType Enum.RotationType
+--- @field SavedQualityLevel Enum.SavedQualitySetting
+--- @field StartMaximized boolean
+--- @field StartScreenPosition Vector2
+--- @field StartScreenSize Vector2
+--- @field TouchCameraMovementMode Enum.TouchCameraMovementMode
+--- @field TouchMovementMode Enum.TouchMovementMode
+--- @field UsedCoreGuiIsVisibleToggle boolean
+--- @field UsedCustomGuiIsVisibleToggle boolean
+--- @field UsedHideHudShortcut boolean
+--- @field VREnabled boolean
+--- @field VRRotationIntensity number
+--- @field VignetteEnabled boolean
+--- @field GetCameraYInvertValue fun( self : UserGameSettings ) : number
+--- @field GetOnboardingCompleted fun( self : UserGameSettings, onboardingId : string ) : boolean
+--- @field GetTutorialState fun( self : UserGameSettings, tutorialId : string ) : boolean
+--- @field InFullScreen fun( self : UserGameSettings ) : boolean
+--- @field InStudioMode fun( self : UserGameSettings ) : boolean
+--- @field ResetOnboardingCompleted fun( self : UserGameSettings, onboardingId : string )
+--- @field SetCameraYInvertVisible fun( self : UserGameSettings )
+--- @field SetGamepadCameraSensitivityVisible fun( self : UserGameSettings )
+--- @field SetOnboardingCompleted fun( self : UserGameSettings, onboardingId : string )
+--- @field SetTutorialState fun( self : UserGameSettings, tutorialId : string, value : boolean )
+--- @field FullscreenChanged RBXScriptSignal@fun( isFullscreen : boolean )
+--- @field PerformanceStatsVisibleChanged RBXScriptSignal@fun( isPerformanceStatsVisible : boolean )
+--- @field StudioModeChanged RBXScriptSignal@fun( isStudioMode : boolean )
+
+--}}} End of UserGameSettings;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

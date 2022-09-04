@@ -1,0 +1,112 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: Humanoid
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ Humanoid:
+
+--- @class Humanoid : Instance
+--- @field AutoJumpEnabled boolean
+--- @field AutoRotate boolean
+--- @field AutomaticScalingEnabled boolean
+--- @field BreakJointsOnDeath boolean
+--- @field CameraOffset Vector3
+--- @field CollisionType Enum.HumanoidCollisionType
+--- @field DisplayDistanceType Enum.HumanoidDisplayDistanceType
+--- @field DisplayName string
+--- @field FloorMaterial Enum.Material
+--- @field Health number
+--- @field HealthDisplayDistance number
+--- @field HealthDisplayType Enum.HumanoidHealthDisplayType
+--- @field HipHeight number
+--- @field Jump boolean
+--- @field JumpHeight number
+--- @field JumpPower number
+--- @field LeftLeg BasePart
+--- @field MaxHealth number
+--- @field MaxSlopeAngle number
+--- @field MoveDirection Vector3
+--- @field NameDisplayDistance number
+--- @field NameOcclusion Enum.NameOcclusion
+--- @field PlatformStand boolean
+--- @field RequiresNeck boolean
+--- @field RigType Enum.HumanoidRigType
+--- @field RightLeg BasePart
+--- @field RootPart BasePart
+--- @field SeatPart BasePart
+--- @field Sit boolean
+--- @field TargetPoint Vector3
+--- @field Torso BasePart
+--- @field UseJumpPower boolean
+--- @field WalkSpeed number
+--- @field WalkToPart BasePart
+--- @field WalkToPoint Vector3
+--- @field maxHealth number
+--- @field AddAccessory fun( self : Humanoid, accessory : Instance )
+--- @field AddCustomStatus fun( self : Humanoid, status : string ) : boolean
+--- @field AddStatus fun( self : Humanoid, status : Enum.Status ) : boolean
+--- @field ApplyDescriptionBlocking fun( self : Humanoid, humanoidDescription : HumanoidDescription )
+--- @field BuildRigFromAttachments fun( self : Humanoid )
+--- @field CacheDefaults fun( self : Humanoid )
+--- @field ChangeState fun( self : Humanoid, state : Enum.HumanoidStateType )
+--- @field EquipTool fun( self : Humanoid, tool : Instance )
+--- @field GetAccessories fun( self : Humanoid ) : table<number, any>
+--- @field GetAccessoryHandleScale fun( self : Humanoid, instance : Instance, partType : Enum.BodyPartR15 ) : Vector3
+--- @field GetAppliedDescription fun( self : Humanoid ) : HumanoidDescription
+--- @field GetBodyPartR15 fun( self : Humanoid, part : Instance ) : Enum.BodyPartR15
+--- @field GetLimb fun( self : Humanoid, part : Instance ) : Enum.Limb
+--- @field GetPlayingAnimationTracks fun( self : Humanoid ) : table<number, any>
+--- @field GetState fun( self : Humanoid ) : Enum.HumanoidStateType
+--- @field GetStateEnabled fun( self : Humanoid, state : Enum.HumanoidStateType ) : boolean
+--- @field GetStatuses fun( self : Humanoid ) : table<number, any>
+--- @field HasCustomStatus fun( self : Humanoid, status : string ) : boolean
+--- @field HasStatus fun( self : Humanoid, status : Enum.Status ) : boolean
+--- @field LoadAnimation fun( self : Humanoid, animation : Animation ) : AnimationTrack
+--- @field Move fun( self : Humanoid, moveDirection : Vector3, relativeToCamera : boolean )
+--- @field MoveTo fun( self : Humanoid, location : Vector3, part : Instance )
+--- @field RemoveAccessories fun( self : Humanoid )
+--- @field RemoveCustomStatus fun( self : Humanoid, status : string ) : boolean
+--- @field RemoveStatus fun( self : Humanoid, status : Enum.Status ) : boolean
+--- @field ReplaceBodyPartR15 fun( self : Humanoid, bodyPart : Enum.BodyPartR15, part : BasePart ) : boolean
+--- @field SetClickToWalkEnabled fun( self : Humanoid, enabled : boolean )
+--- @field SetStateEnabled fun( self : Humanoid, state : Enum.HumanoidStateType, enabled : boolean )
+--- @field TakeDamage fun( self : Humanoid, amount : number )
+--- @field UnequipTools fun( self : Humanoid )
+--- @field loadAnimation fun( self : Humanoid, animation : Animation ) : AnimationTrack
+--- @field takeDamage fun( self : Humanoid, amount : number )
+--- @field ApplyDescription fun( self : Humanoid, humanoidDescription : HumanoidDescription, assetTypeVerification : Enum.AssetTypeVerification )
+--- @field ApplyDescriptionClientServer fun( self : Humanoid, humanoidDescription : HumanoidDescription )
+--- @field ApplyDescriptionReset fun( self : Humanoid, humanoidDescription : HumanoidDescription, assetTypeVerification : Enum.AssetTypeVerification )
+--- @field PlayEmote fun( self : Humanoid, emoteName : string ) : boolean
+--- @field PlayEmoteAndGetAnimTrackById fun( self : Humanoid, emoteId : number ) : table<any, any>
+--- @field AnimationPlayed RBXScriptSignal@fun( animationTrack : AnimationTrack )
+--- @field Climbing RBXScriptSignal@fun( speed : number )
+--- @field ClusterCompositionFinished RBXScriptSignal@fun( )
+--- @field CustomStatusAdded RBXScriptSignal@fun( status : string )
+--- @field CustomStatusRemoved RBXScriptSignal@fun( status : string )
+--- @field Died RBXScriptSignal@fun( )
+--- @field EmoteTriggered RBXScriptSignal@fun( success : boolean, animationTrack : AnimationTrack )
+--- @field FallingDown RBXScriptSignal@fun( active : boolean )
+--- @field FreeFalling RBXScriptSignal@fun( active : boolean )
+--- @field GettingUp RBXScriptSignal@fun( active : boolean )
+--- @field HealthChanged RBXScriptSignal@fun( health : number )
+--- @field Jumping RBXScriptSignal@fun( active : boolean )
+--- @field MoveToFinished RBXScriptSignal@fun( reached : boolean )
+--- @field PlatformStanding RBXScriptSignal@fun( active : boolean )
+--- @field Ragdoll RBXScriptSignal@fun( active : boolean )
+--- @field Running RBXScriptSignal@fun( speed : number )
+--- @field Seated RBXScriptSignal@fun( active : boolean, currentSeatPart : BasePart )
+--- @field StateChanged RBXScriptSignal@fun( old : Enum.HumanoidStateType, new : Enum.HumanoidStateType )
+--- @field StateEnabledChanged RBXScriptSignal@fun( state : Enum.HumanoidStateType, isEnabled : boolean )
+--- @field StatusAdded RBXScriptSignal@fun( status : Enum.Status )
+--- @field StatusRemoved RBXScriptSignal@fun( status : Enum.Status )
+--- @field Strafing RBXScriptSignal@fun( active : boolean )
+--- @field Swimming RBXScriptSignal@fun( speed : number )
+--- @field Touched RBXScriptSignal@fun( touchingPart : BasePart, humanoidPart : BasePart )
+
+--}}} End of Humanoid;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

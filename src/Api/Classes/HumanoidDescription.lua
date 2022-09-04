@@ -1,0 +1,65 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: HumanoidDescription
+ --->> Type: Instance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ HumanoidDescription:
+
+--- @class HumanoidDescription : Instance
+--- @field AccessoryBlob string
+--- @field BackAccessory string
+--- @field BodyTypeScale number
+--- @field ClimbAnimation number
+--- @field DepthScale number
+--- @field Face number
+--- @field FaceAccessory string
+--- @field FallAnimation number
+--- @field FrontAccessory string
+--- @field GraphicTShirt number
+--- @field HairAccessory string
+--- @field HatAccessory string
+--- @field Head number
+--- @field HeadColor Color3
+--- @field HeadScale number
+--- @field HeightScale number
+--- @field IdleAnimation number
+--- @field JumpAnimation number
+--- @field LeftArm number
+--- @field LeftArmColor Color3
+--- @field LeftLeg number
+--- @field LeftLegColor Color3
+--- @field MoodAnimation number
+--- @field NeckAccessory string
+--- @field NumberEmotesLoaded number
+--- @field Pants number
+--- @field ProportionScale number
+--- @field RightArm number
+--- @field RightArmColor Color3
+--- @field RightLeg number
+--- @field RightLegColor Color3
+--- @field RunAnimation number
+--- @field Shirt number
+--- @field ShouldersAccessory string
+--- @field SwimAnimation number
+--- @field Torso number
+--- @field TorsoColor Color3
+--- @field WaistAccessory string
+--- @field WalkAnimation number
+--- @field WidthScale number
+--- @field AddEmote fun( self : HumanoidDescription, name : string, assetId : number )
+--- @field GetAccessories fun( self : HumanoidDescription, includeRigidAccessories : boolean ) : table<number, any>
+--- @field GetEmotes fun( self : HumanoidDescription ) : table<string, any>
+--- @field GetEquippedEmotes fun( self : HumanoidDescription ) : table<number, any>
+--- @field RemoveEmote fun( self : HumanoidDescription, name : string )
+--- @field SetAccessories fun( self : HumanoidDescription, accessories : table<number, any>, includeRigidAccessories : boolean )
+--- @field SetEmotes fun( self : HumanoidDescription, emotes : table<string, any> )
+--- @field SetEquippedEmotes fun( self : HumanoidDescription, equippedEmotes : table<number, any> )
+--- @field EmotesChanged RBXScriptSignal@fun( newEmotes : table<string, any> )
+--- @field EquippedEmotesChanged RBXScriptSignal@fun( newEquippedEmotes : table<number, any> )
+
+--}}} End of HumanoidDescription;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;

@@ -1,0 +1,73 @@
+-->> [[ ꧁༒☬𝓒𝓻𝓮𝓪𝓽𝓸𝓻: 𝓓𝓲𝓪𝔁𝓲𝓾𝓶☬༒꧂ ]] <<--
+--->> Name: ConnectionError
+ --->> Type: EnumItem
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--{{{ 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷:
+
+
+--{{{ ConnectionError:
+
+--- @class Enum.ConnectionError : EnumItem
+--- @field OK Enum.ConnectionError @0
+--- @field Unknown Enum.ConnectionError @1
+--- @field DisconnectErrors Enum.ConnectionError @256
+--- @field DisconnectBadhash Enum.ConnectionError @257
+--- @field DisconnectSecurityKeyMismatch Enum.ConnectionError @258
+--- @field DisconnectNewSecurityKeyMismatch Enum.ConnectionError @272
+--- @field DisconnectProtocolMismatch Enum.ConnectionError @259
+--- @field DisconnectReceivePacketError Enum.ConnectionError @260
+--- @field DisconnectReceivePacketStreamError Enum.ConnectionError @261
+--- @field DisconnectSendPacketError Enum.ConnectionError @262
+--- @field DisconnectIllegalTeleport Enum.ConnectionError @263
+--- @field DisconnectDuplicatePlayer Enum.ConnectionError @264
+--- @field DisconnectDuplicateTicket Enum.ConnectionError @265
+--- @field DisconnectTimeout Enum.ConnectionError @266
+--- @field DisconnectLuaKick Enum.ConnectionError @267
+--- @field DisconnectOnRemoteSysStats Enum.ConnectionError @268
+--- @field DisconnectHashTimeout Enum.ConnectionError @269
+--- @field DisconnectCloudEditKick Enum.ConnectionError @270
+--- @field DisconnectPlayerless Enum.ConnectionError @271
+--- @field DisconnectEvicted Enum.ConnectionError @273
+--- @field DisconnectDevMaintenance Enum.ConnectionError @274
+--- @field DisconnectRobloxMaintenance Enum.ConnectionError @275
+--- @field DisconnectRejoin Enum.ConnectionError @276
+--- @field DisconnectConnectionLost Enum.ConnectionError @277
+--- @field DisconnectIdle Enum.ConnectionError @278
+--- @field DisconnectRaknetErrors Enum.ConnectionError @279
+--- @field DisconnectWrongVersion Enum.ConnectionError @280
+--- @field DisconnectBySecurityPolicy Enum.ConnectionError @281
+--- @field DisconnectBlockedIP Enum.ConnectionError @282
+--- @field DisconnectClientFailure Enum.ConnectionError @284
+--- @field DisconnectClientRequest Enum.ConnectionError @285
+--- @field DisconnectOutOfMemory Enum.ConnectionError @286
+--- @field DisconnectModeratedGame Enum.ConnectionError @287
+--- @field DisconnectOutOfMemoryExitContinue Enum.ConnectionError @288
+--- @field DisconnectOutOfMemoryKeepPlayingExit Enum.ConnectionError @289
+--- @field PlacelaunchErrors Enum.ConnectionError @512
+--- @field PlacelaunchDisabled Enum.ConnectionError @515
+--- @field PlacelaunchError Enum.ConnectionError @516
+--- @field PlacelaunchGameEnded Enum.ConnectionError @517
+--- @field PlacelaunchGameFull Enum.ConnectionError @518
+--- @field PlacelaunchUserLeft Enum.ConnectionError @522
+--- @field PlacelaunchRestricted Enum.ConnectionError @523
+--- @field PlacelaunchUnauthorized Enum.ConnectionError @524
+--- @field PlacelaunchFlooded Enum.ConnectionError @525
+--- @field PlacelaunchHashExpired Enum.ConnectionError @526
+--- @field PlacelaunchHashException Enum.ConnectionError @527
+--- @field PlacelaunchPartyCannotFit Enum.ConnectionError @528
+--- @field PlacelaunchHttpError Enum.ConnectionError @529
+--- @field PlacelaunchCustomMessage Enum.ConnectionError @610
+--- @field PlacelaunchOtherError Enum.ConnectionError @611
+--- @field TeleportErrors Enum.ConnectionError @768
+--- @field TeleportFailure Enum.ConnectionError @769
+--- @field TeleportGameNotFound Enum.ConnectionError @770
+--- @field TeleportGameEnded Enum.ConnectionError @771
+--- @field TeleportGameFull Enum.ConnectionError @772
+--- @field TeleportUnauthorized Enum.ConnectionError @773
+--- @field TeleportFlooded Enum.ConnectionError @774
+--- @field TeleportIsTeleporting Enum.ConnectionError @775
+
+--}}} End of ConnectionError;
+
+
+--}}} End of 𝓓𝓸𝓬𝓾𝓶𝓮𝓷𝓽𝓪𝓽𝓲𝓸𝓷;
