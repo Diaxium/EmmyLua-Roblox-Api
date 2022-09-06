@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Roblox.iml" filepath="$PROJECT_DIR$/.idea/Roblox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EmmyLua-Roblox-Api.iml" filepath="$PROJECT_DIR$/.idea/EmmyLua-Roblox-Api.iml" />
     </modules>
   </component>
 </project>
